@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    /* background-color:#ffff4d; */
+    background: linear-gradient(to bottom, #ffff66 0%, #ffcc99 100%);
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(67, 224, 224, 0.5)50%), url(1.jpg); */
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 20px;
+    font-family: Arial;
+    position: relative;
+    left:-30px;
+    top:120px;
+    
+}
+.menu{
+    /* width: 200px; */
+    float: left;
+    /* height: 70px; */
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    /* text-decoration: none; */
+    color: rgb(216, 74, 74);
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 16px;
+    /* transition: 0.4s ease-in-out; */
+}
+.content{
+    width: 520px;
+    height: 500px;
+    margin: auto;
+    color: rgb(34, 48, 124);
+    position: relative;
+    bottom:-15px;
+    border-style: inset;
+    /* background-color: rgba(231, 201, 28, 0.733);     */
+    /* border-image: url(border.png) 30% stretch; */
+    border-radius: 50px 10px;
+    /* box-shadow: 20px 20px 50px 10px; */
+    background: linear-gradient(to bottom, #66ff99 0%, #ffffcc 100%);
+    text-align: center;
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: 'Garamond, serif';
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    font-size: 18px;
+    /* box-shadow: 20px 20px 50px 15px grey; */
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 45px;
+    padding-left: 20px;
+    margin-top: 5%;
+    letter-spacing: 2px;
+}
+.img1{
+    position: fixed;
+    left: 0px;
+    width: 150px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.img2{
+    position: relative;
+    top: 220px;
+    left: -20px;
+    width: 250px;
+}
+.img3{
+    position: relative;
+    top: -20px;
+    right: -950px;
+    width: 250px;
+}
