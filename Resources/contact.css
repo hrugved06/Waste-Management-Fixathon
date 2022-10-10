@@ -18,7 +18,7 @@ body {
 }
 
 .test {
-    background-color: peru;
+    background-color: gray;
     border: 2px solid black;
 }
 
@@ -40,4 +40,16 @@ body {
 .my-breadcrumb {
     margin-top: 0px;
     margin-left: 4.5vw;
+}
+
+.my-cards {
+    border-radius: 20px;
+    background-size: cover;
+    padding: 20px;
+    color: black;
+    font-weight: 400;
+}
+
+.my-cards:hover {
+    background-color: rgb(241, 234, 43);
 }
