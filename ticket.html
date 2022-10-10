@@ -2,100 +2,100 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1.0">
-	<title>
-		Ticket Generation
-	</title>
-	<style>
-		body {
-			background-color: #93d9ff;
-			font-family: Verdana;
-			text-align: center;
-		}
-		form {
-			background-color: rgb(15, 139, 201);
-			max-width: 500px;
-			margin: 50px auto;
-			padding: 30px 20px;
-			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-		}
-		.form-control {
-			text-align: left;
-			margin-bottom: 25px;
-		}
-		.form-control label {
-			display: block;
-			margin-bottom: 10px;
-		}
-		.form-control input,
-		.form-control select,
-		.form-control textarea {
-			border: 1px solid #777;
-			border-radius: 2px;
-			font-family: inherit;
-			padding: 10px;
-			display: block;
-			width: 95%;
-		}
-		.form-control input[type="radio"],
-		.form-control input[type="checkbox"] {
-			display: inline-block;
-			width: auto;
-		}
-		button {
-			background-color: #93ade9;
-			border: 1px solid #777;
-			border-radius: 2px;
-			font-family: inherit;
-			font-size: 21px;
-			display: block;
-			width: 100%;
-			margin-top: 50px;
-			margin-bottom: 20px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Resources/Logo.png" type="image/icon type">
+    <title>
+        Ticket Generation
+    </title>
+    <style>
+        body {
+            background-color: #93d9ff;
+            font-family: Verdana;
+            text-align: center;
+        }
+        
+        form {
+            background-color: rgb(15, 139, 201);
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+        
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+        
+        button {
+            background-color: #93ade9;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-	<h1>TICKET GENERATION</h1>
-	<form id="form">
-		<div class="form-control">
-			<label for="name" id="label-name">
+    <h1>TICKET GENERATION</h1>
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">
 				Full Name
 			</label>
-			<input type="text"
-				id="name"
-				placeholder="Please Enter your Full Name" />
-		</div>
+            <input type="text" id="name" placeholder="Please Enter your Full Name" />
+        </div>
 
-		<div class="form-control">
-			<label for="email" id="label-email">
+        <div class="form-control">
+            <label for="email" id="label-email">
 				Email
 			</label>
-			<input type="email"
-				id="email"
-				placeholder="Please Enter your Email" />
-		</div>
+            <input type="email" id="email" placeholder="Please Enter your Email" />
+        </div>
 
-		<div class="form-control">
-			<label for="age" id="label-age">
+        <div class="form-control">
+            <label for="age" id="label-age">
 				Age
 			</label>
-			<input type="text"
-				id="age"
-				placeholder="Please Enter your Age" />
-		</div>
+            <input type="text" id="age" placeholder="Please Enter your Age" />
+        </div>
 
-		<div class="form-control">
-			<label for="role" id="label-role">
+        <div class="form-control">
+            <label for="role" id="label-role">
 				Which option best describes you?
 			</label>
-			
-			<!-- Dropdown options -->
-			<select name="role" id="role">
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
 				<option value="student">Student</option>
 				<option value="govtofficer">Govt Officer</option>
 				<option value="professional">Professional</option>
@@ -103,7 +103,7 @@
                 <option value="worksinindustry">Works in Industry</option>
 				<option value="other">Other</option>
 			</select>
-		</div>
+        </div>
         <div class="form-control">
             <label>Source of waste</label>
             <label for="source-1">
@@ -118,61 +118,60 @@
             </label>
         </div>
 
-		<div class="form-control">
-			<label>What type of waste needs to be discarded?
+        <div class="form-control">
+            <label>What type of waste needs to be discarded?
 				<small>(Check that applies)</small>
 			</label>
-			<label for="inp-1">
+            <label for="inp-1">
 				<input type="checkbox"
 					name="inp">Industrial Waste</input></label>
-			<label for="inp-2">
+            <label for="inp-2">
 				<input type="checkbox"
 					name="inp">Commercial Waste</input></label>
-			<label for="inp-3">
+            <label for="inp-3">
 				<input type="checkbox"
 					name="inp">Domestic Waste</input></label>
-			<label for="inp-4">
+            <label for="inp-4">
 				<input type="checkbox"
 					name="inp">Agricultural Waste</input></label>
-			<label for="inp-5">
+            <label for="inp-5">
 				<input type="checkbox"
 					name="inp">Biodegradable</input></label>
-			<label for="inp-6">
+            <label for="inp-6">
 				<input type="checkbox"
 					name="inp">Non-biodegradable</input></label>
-		</div>
+        </div>
 
         <div class="form-control">
-			<label>Would you recommend this website to someone?</label>
-			<label for="recommed-1">
+            <label>Would you recommend this website to someone?</label>
+            <label for="recommed-1">
 				<input type="radio"
 					id="recommed-1"
 					name="recommed">Yes</input>
 			</label>
-			<label for="recommed-2">
+            <label for="recommed-2">
 				<input type="radio"
 					id="recommed-2"
 					name="recommed">No</input>
 			</label>
-			<label for="recommed-3">
+            <label for="recommed-3">
 				<input type="radio"
 					id="recommed-3"
 					name="recommed">Maybe</input>
 			</label>
-		</div>
+        </div>
 
-		<div class="form-control">
-			<label for="comment">
+        <div class="form-control">
+            <label for="comment">
 				Your Comments/Suggestions are highly appreciated!
 			</label>
-			<textarea name="comment" id="comment"
-				placeholder="Enter your comment here">
+            <textarea name="comment" id="comment" placeholder="Enter your comment here">
 			</textarea>
-		</div>
-		<button type="submit" value="submit">
+        </div>
+        <button type="submit" value="submit">
 			Submit
 		</button>
-	</form>
+    </form>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.main{
+
+.main {
     width: 100%;
     /* background-color:#ffff4d; */
     background: linear-gradient(to bottom, #ffff66 0%, #ffcc99 100%);
@@ -11,43 +12,49 @@
     background-size: cover;
     height: 100vh;
 }
-.navbar{
+
+.navbar {
     width: 1200px;
     height: 75px;
     margin: auto;
 }
-.icon{
+
+.icon {
     width: 200px;
     float: left;
     height: 70px;
 }
-.logo{
+
+.logo {
     color: #ff7200;
     font-size: 20px;
     font-family: Arial;
     position: relative;
-    left:-30px;
-    top:120px;
-    
+    left: -30px;
+    top: 120px;
 }
-.menu{
+
+.menu {
     /* width: 200px; */
     float: left;
     /* height: 70px; */
 }
-ul{
+
+ul {
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-ul li{
+
+ul li {
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14px;
 }
-ul li a{
+
+ul li a {
     /* text-decoration: none; */
     color: rgb(216, 74, 74);
     font-family: 'Times New Roman';
@@ -55,13 +62,14 @@ ul li a{
     font-size: 16px;
     /* transition: 0.4s ease-in-out; */
 }
-.content{
+
+.content {
     width: 520px;
     height: 500px;
     margin: auto;
     color: rgb(34, 48, 124);
     position: relative;
-    bottom:-15px;
+    bottom: -15px;
     border-style: inset;
     /* background-color: rgba(231, 201, 28, 0.733);     */
     /* border-image: url(border.png) 30% stretch; */
@@ -70,7 +78,8 @@ ul li a{
     background: linear-gradient(to bottom, #66ff99 0%, #ffffcc 100%);
     text-align: center;
 }
-.content .par{
+
+.content .par {
     padding-left: 20px;
     padding-bottom: 25px;
     font-family: 'Garamond, serif';
@@ -79,27 +88,31 @@ ul li a{
     font-size: 18px;
     /* box-shadow: 20px 20px 50px 15px grey; */
 }
-.content h1{
+
+.content h1 {
     font-family: 'Times New Roman';
     font-size: 45px;
     padding-left: 20px;
     margin-top: 5%;
     letter-spacing: 2px;
 }
-.img1{
+
+.img1 {
     position: fixed;
     left: 0px;
     width: 150px;
     padding-left: 10px;
     padding-top: 10px;
 }
-.img2{
+
+.img2 {
     position: relative;
     top: 220px;
     left: -20px;
     width: 250px;
 }
-.img3{
+
+.img3 {
     position: relative;
     top: -20px;
     right: -950px;
