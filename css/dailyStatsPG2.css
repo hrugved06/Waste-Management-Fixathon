@@ -28,19 +28,24 @@ body {
     margin-top: 8%;
 }
 
+h3{
+    text-align: center;
+}
+
+
 .top{
     font-size: xx-large;
     font-weight: bolder;
     position: relative;
     /* font-family: 'Courier New', Courier, monospace; */
     top: 10%;
-    left: 45%;
+    left: 35%;
 }
 
 .card {
 border: none;
 border-radius: 10px;
-margin-top: 20px;
+margin-top: 50px;
 }
 
 .c-details span {
@@ -66,7 +71,7 @@ height: 25px;
 padding-bottom: 3px;
 border-radius: 5px;
 display: flex;
-color: #fed85d;
+color: #00a708;
 justify-content: center;
 align-items: center
 }
@@ -87,4 +92,8 @@ font-weight: 600
 
 .text2 {
 color: #a5aec0
+}
+
+.heading .span{
+    font-weight: bolder;
 }
