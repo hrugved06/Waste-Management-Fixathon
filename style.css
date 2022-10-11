@@ -166,3 +166,7 @@ ul li a {
     /* font-size: 20px; */
     /* text-align: center; */
 }
+
+.row img{
+    border-radius: 10px;
+}
