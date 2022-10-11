@@ -1,92 +1,139 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Snippet - BBBootstrap</title>
-        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
-        <link href='./css/dailyStatsPG2.css' rel='stylesheet'>
-        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>    
-    </head>
-    <body class='snippet-body'>
 
-        <div>
-            <span class="top">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - BBBootstrap</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <link href='./css/dailyStatsPG2.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+    <link rel="icon" href="./Resources/waste recycle.jpg" type="image/icon type">
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+        <img src="./Resources/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span class="navbar-brand mb-0 h1">Waste Management</span>
+    </a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./Awareness.html">Importance</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./ticket.html">Request Pickup</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stats</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./dailyStats.html">Collection this week</a>
+                <a class="dropdown-item" href="./dailyStatsPG2.html">Products</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./Contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./recruit.html">Want to Help</a>
+        </li>
+    </ul>
+</nav>
+
+<body class='snippet-body'>
+
+    <div>
+        <span class="top">
                 Garbage Collected This Week
             </span>
-        </div>
-        <div class="container mt-5 mb-3">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-3 mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <div class="icon"> <i class='bx bxs-dryer'></i> </div>
-                                <div class="ms-2 c-details">
-                                    <h6 class="mb-0">Dry Garbage</h6> <span>1 hour ago</span>
-                                </div>
+    </div>
+    <div class="container mt-5 mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class='bx bxs-dryer'></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Dry Garbage</h6> <span>1 hour ago</span>
                             </div>
-                            <div class="badge"> <span>Collected</span> </div>
                         </div>
+                        <div class="badge"> <span>Collected</span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="heading"><span class="span">1.2 Tons</span><br>Collected Today</h3>
                         <div class="mt-5">
-                            <h3 class="heading"><span class="span">1.2 Tons</span><br>Collected Today</h3>
-                            <div class="mt-5">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="mt-3"> <span class="text1">5.8 Tons collected <span class="text2">of 7 Tons capacity</span></span> </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="mt-3"> <span class="text1">5.8 Tons collected <span class="text2">of 7 Tons capacity</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3 mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <div class="icon"> <i class='bx bx-cloud-light-rain'></i> </div>
-                                <div class="ms-2 c-details">
-                                    <h6 class="mb-0">Wet Garbage</h6> <span>Just Now</span>
-                                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class='bx bx-cloud-light-rain'></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Wet Garbage</h6> <span>Just Now</span>
                             </div>
-                            <div class="badge"> <span>In-Progress</span> </div>
                         </div>
+                        <div class="badge"> <span>In-Progress</span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="heading"><span class="span">0.8 Tons</span><br>Collected Today</h3>
                         <div class="mt-5">
-                            <h3 class="heading"><span class="span">0.8 Tons</span><br>Collected Today</h3>
-                            <div class="mt-5">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="mt-3"> <span class="text1">3.2 Tons collected <span class="text2">of 5 Tons capacity</span></span> </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="mt-3"> <span class="text1">3.2 Tons collected <span class="text2">of 5 Tons capacity</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3 mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <div class="icon"> <i class='bx bxs-gas-pump'></i> </div>
-                                <div class="ms-2 c-details">
-                                    <h6 class="mb-0">Biodegradable Garbage</h6> <span>3 hours ago</span>
-                                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class='bx bxs-gas-pump'></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Biodegradable Garbage</h6> <span>3 hours ago</span>
                             </div>
-                            <div class="badge"> <span>Collected</span> </div>
                         </div>
+                        <div class="badge"> <span>Collected</span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="heading"><span class="span">0.2 tons</span><br>Collected Today</h3>
                         <div class="mt-5">
-                            <h3 class="heading"><span class="span">0.2 tons</span><br>Collected Today</h3>
-                            <div class="mt-5">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="mt-3"> <span class="text1">1.2 Tons collected <span class="text2">of 1.5 Tons capacity</span></span> </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="mt-3"> <span class="text1">1.2 Tons collected <span class="text2">of 1.5 Tons capacity</span></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
-        <script type='text/javascript' src='./js/dailyStatsPG2.js'></script>                        
-    </body>
+    </div>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript' src='./js/dailyStatsPG2.js'></script>
+</body>
+
 </html>

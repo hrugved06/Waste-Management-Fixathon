@@ -1,13 +1,18 @@
 body {
     background-color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
+    font: 1.8rem/1.4 Georgia, serif;
     font-size: 16px;
     line-height: 1.5;
     color: #666;
     margin: 0;
     padding: 0;
-    width: 95vw;
-    height: 100vh;
+}
+
+.jumbotron {
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
 }
 
 .heading {
@@ -48,8 +53,9 @@ body {
     padding: 20px;
     color: black;
     font-weight: 400;
+    height: 400px;
 }
 
 .my-cards:hover {
-    background-color: rgb(241, 234, 43);
+    background: #f2f2f2;
 }

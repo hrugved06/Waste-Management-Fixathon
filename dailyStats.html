@@ -1,49 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Daily Stats</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./css/dailyStats.css">
+    <meta charset="UTF-8">
+    <title>Daily Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/dailyStats.css">
+
+
+    <link rel="icon" href="./Resources/waste recycle.jpg" type="image/icon type">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 
 </head>
-<body>
 
-  <div class="top">
-    <span>Check Out the Products Made Today</span>
-  </div>
-<!-- partial:index.partial.html -->
-<main class="page-content">
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Plastic Products</h2>
-      <p class="copy">Recycling plastic water bottles helps to conserve space. Use and recyle again! Wink Wink.</p>
-      <button class="btn">View Stats</button>
+<body>
+    <nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="./Resources/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <span class="navbar-brand mb-0 h1">Waste Management</span>
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Awareness.html">Importance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./ticket.html">Request Pickup</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stats</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./dailyStats.html">Collection this week</a>
+                    <a class="dropdown-item" href="./dailyStatsPG2.html">Products</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./recruit.html">Want to Help</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="top mt-5">
+        <span>Check Out the Products Made Today</span>
     </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Paper and Cardboard</h2>
-      <p class="copy">Here's a piece of paper for you to be productive and shine.</p>
-      <button class="btn">View Stats</button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Metal Containers</h2>
-      <p class="copy">Safe and tight enviornment friendly storage.</p>
-      <button class="btn">View Stats</button>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title">Biodegradable Products</h2>
-      <p class="copy">We are safe and sound, hehe!</p>
-      <button class="btn">View Stats</button>
-    </div>
-  </div>
-</main>
-<!-- partial -->
-  
+    <!-- partial:index.partial.html -->
+    <main class="page-content">
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Plastic Products</h2>
+                <p class="copy">Recycling plastic water bottles helps to conserve space. Use and recyle again! Wink Wink.</p>
+                <button class="btn">View Stats</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Paper and Cardboard</h2>
+                <p class="copy">Here's a piece of paper for you to be productive and shine.</p>
+                <button class="btn">View Stats</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Metal Containers</h2>
+                <p class="copy">Safe and tight enviornment friendly storage.</p>
+                <button class="btn">View Stats</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Biodegradable Products</h2>
+                <p class="copy">We are safe and sound, hehe!</p>
+                <button class="btn">View Stats</button>
+            </div>
+        </div>
+    </main>
+    <!-- partial -->
+
 </body>
+
 </html>
