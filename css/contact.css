@@ -1,0 +1,78 @@
+body {
+    background-color: #f2f2f2;
+    font: 1.8rem/1.4 Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron {
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+.heading {
+    color: cadetblue;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.test {
+    background-color: gray;
+    border: 2px solid black;
+}
+
+.img-responsive {
+    color: aqua;
+}
+
+.main-content {
+    padding: 50px;
+}
+
+.text-design {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.my-breadcrumb {
+    margin-top: 0px;
+    margin-left: 4.5vw;
+}
+
+.my-cards {
+    border-radius: 20px;
+    background-size: cover;
+    padding: 20px;
+    color: black;
+    font-weight: 400;
+    height: 700px;
+}
+
+.my-cards:hover {
+    background: linear-gradient(180deg, transparent, gray);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.myimg {
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.card-text {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+card-title {
+    font-weight: bold;
+    color: chocolate;
+    font-size: 30px;
+}
