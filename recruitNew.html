@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recruitment</title>
+    <link rel="icon" href="./Resources/Recycle1.jpg" type="image/icon type">
 </head>
+
 <body>
     <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.36360" type="text/javascript"></script>
     <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.36360" type="text/javascript"></script>
@@ -14,669 +17,916 @@
     <script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.36360" type="text/javascript"></script>
     <script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.36360" type="text/javascript"></script>
     <script src="https://cdn03.jotfor.ms/js/vendor/imageinfo.js?v=3.3.36360" type="text/javascript"></script>
-    <script type="text/javascript">	JotForm.newDefaultTheme = true;
-    JotForm.extendsNewTheme = false;
-    JotForm.singleProduct = true;
-    JotForm.newPaymentUIForNewCreatedForms = false;
-    JotForm.newPaymentUI = true;
+    <script type="text/javascript">
+        JotForm.newDefaultTheme = true;
+        JotForm.extendsNewTheme = false;
+        JotForm.singleProduct = true;
+        JotForm.newPaymentUIForNewCreatedForms = false;
+        JotForm.newPaymentUI = true;
 
-	JotForm.init(function(){
-	/*INIT-START*/
-      setTimeout(function() {
-          $('input_5').hint('ex: myname@example.com');
-       }, 20);
-      JotForm.setPhoneMaskingValidator( 'input_6_full', '(##) ##########' );
+        JotForm.init(function() {
+            /*INIT-START*/
+            setTimeout(function() {
+                $('input_5').hint('ex: myname@example.com');
+            }, 20);
+            JotForm.setPhoneMaskingValidator('input_6_full', '(##) ##########');
 
- JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
- JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
- JotForm.calendarOther = {"today":"Today"};
- var languageOptions = document.querySelectorAll('#langList li'); 
- for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
-   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("8", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
- } 
- JotForm.onTranslationsFetch(function() { JotForm.setCalendar("8", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
-	/*INIT-END*/
-	});
+            JotForm.calendarMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            JotForm.calendarDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            JotForm.calendarOther = {
+                "today": "Today"
+            };
+            var languageOptions = document.querySelectorAll('#langList li');
+            for (var langIndex = 0; langIndex < languageOptions.length; langIndex++) {
+                languageOptions[langIndex].on('click', function(e) {
+                    setTimeout(function() {
+                        JotForm.setCalendar("8", false, {
+                            "days": {
+                                "monday": true,
+                                "tuesday": true,
+                                "wednesday": true,
+                                "thursday": true,
+                                "friday": true,
+                                "saturday": true,
+                                "sunday": true
+                            },
+                            "future": true,
+                            "past": true,
+                            "custom": false,
+                            "ranges": false,
+                            "start": "",
+                            "end": ""
+                        });
+                    }, 0);
+                });
+            }
+            JotForm.onTranslationsFetch(function() {
+                JotForm.setCalendar("8", false, {
+                    "days": {
+                        "monday": true,
+                        "tuesday": true,
+                        "wednesday": true,
+                        "thursday": true,
+                        "friday": true,
+                        "saturday": true,
+                        "sunday": true
+                    },
+                    "future": true,
+                    "past": true,
+                    "custom": false,
+                    "ranges": false,
+                    "start": "",
+                    "end": ""
+                });
+            });
+            /*INIT-END*/
+        });
 
-   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"submit","qid":"2","text":"Submit","type":"control_button"},{"name":"clickTo","qid":"3","text":"New Job Application Form","type":"control_head"},{"name":"fullName4","qid":"4","text":"Full Name","type":"control_fullname"},{"name":"email5","qid":"5","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"phoneNumber6","qid":"6","text":"Phone Number","type":"control_phone"},null,{"name":"availableStart8","qid":"8","text":"Available start date:","type":"control_datetime"},{"name":"whatIs9","qid":"9","text":"What is your current employment status?","type":"control_radio"},{"name":"howDo","qid":"10","text":"How do you prefer to submit your resume?","type":"control_radio"},{"name":"uploadResume","qid":"11","text":"Upload Resume","type":"control_fileupload"},null,{"name":"whatPosition","qid":"13","text":"What position are you applying for?","type":"control_dropdown"}]);
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"Submit","type":"control_button"},{"name":"clickTo","qid":"3","text":"New Job Application Form","type":"control_head"},{"name":"fullName4","qid":"4","text":"Full Name","type":"control_fullname"},{"name":"email5","qid":"5","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"phoneNumber6","qid":"6","text":"Phone Number","type":"control_phone"},null,{"name":"availableStart8","qid":"8","text":"Available start date:","type":"control_datetime"},{"name":"whatIs9","qid":"9","text":"What is your current employment status?","type":"control_radio"},{"name":"howDo","qid":"10","text":"How do you prefer to submit your resume?","type":"control_radio"},{"name":"uploadResume","qid":"11","text":"Upload Resume","type":"control_fileupload"},null,{"name":"whatPosition","qid":"13","text":"What position are you applying for?","type":"control_dropdown"}]);}, 20); 
-</script>
-<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f30e2a790832f3e96009402"/>
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.36360" />
-<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.36360" />
-<style type="text/css" id="form-designer-style">
-    /* Injected CSS Code */
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-.form-all {
-  font-family: "Inter", sans-serif;
-}
-.main .jotform-form {
-  width: 100%;
-  padding: 0 3%;
-}
-.form-all {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 752px;
-}
-.form-line-active {
-  background-color: #ffffe0;
-}
-.form-all {
-  font-size: 16px;
-}
-li.form-line {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-.form-line {
-  padding: 12px 10px;
-}
-.form-all .form-textbox,
-.form-all .form-radio-other-input,
-.form-all .form-checkbox-other-input,
-.form-all .form-captcha input,
-.form-all .form-spinner input,
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next,
-.form-all .qq-upload-button,
-.form-all .signature-wrapper,
-.form-all .form-error-message {
-  border-radius: 0px;
-}
-.form-all .form-textarea {
-  border-radius: 0px;
-}
-.supernova .form-all,
-.form-all {
-  border-radius: 20px;
-}
-.form-section:first-child {
-  border-radius: 20px 20px 0 0;
-}
-.form-section:last-child {
-  border-radius: 0 0 20px 20px;
-}
-.form-section {
-  padding: 0px 38px;
-}
-.form-textbox,
-.form-textarea,
-li[data-type=control_fileupload] .qq-upload-button,
-.signature-wrapper {
-  border-width: 1px;
-  width: 100% !important;
-  border-style: solid;
-  border-color: #119652;
-  color: #05301a;
-}
-.form-textarea:hover,
-.form-textbox:hover,
-li[data-type=control_fileupload] .qq-upload-button:hover,
-.signature-wrapper:hover {
-  border-color: rgba(17, 150, 82, 0.5);
-  box-shadow: 0 0 0 2px rgba(17, 150, 82, 0.25);
-}
-.form-textarea:focus,
-.form-textbox:focus,
-li[data-type=control_fileupload] .qq-upload-button:focus,
-.signature-wrapper:focus {
-  border-color: #119652;
-  box-shadow: 0 0 0 3px rgba(17, 150, 82, 0.25);
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-label {
-  font-family: "Inter", sans-serif;
-}
-.form-line-column {
-  width: calc(50% - 8px);
-}
-.form-dropdown:first-child {
-  border-color: #119652;
-  color: #044323;
-}
-.form-checkbox-item label,
-.form-checkbox-item span,
-.form-radio-item label,
-.form-radio-item span {
-  color: #098646;
-}
-.form-radio-item,
-.form-checkbox-item {
-  padding-bottom: 0px !important;
-}
-.form-radio-item:last-child,
-.form-checkbox-item:last-child {
-  padding-bottom: 0;
-}
-.form-single-column .form-checkbox-item,
-.form-single-column .form-radio-item {
-  width: 100%;
-}
-.form-checkbox-item .editor-container div,
-.form-radio-item .editor-container div {
-  position: relative;
-}
-.form-checkbox-item .editor-container div:before,
-.form-radio-item .editor-container div:before {
-  display: inline-block;
-  vertical-align: middle;
-  left: 0;
-  width: 20px;
-  height: 20px;
-}
-.form-radio-item:not(#foo),
-.form-checkbox-item:not(#foo) {
-  position: relative;
-}
-.form-radio-item:not(#foo) .form-radio + span:before,
-.form-checkbox-item:not(#foo) .form-radio + span:before,
-.form-radio-item:not(#foo) .form-radio + span:after,
-.form-checkbox-item:not(#foo) .form-radio + span:after,
-.form-radio-item:not(#foo) .form-radio:checked + span div:after,
-.form-checkbox-item:not(#foo) .form-radio:checked + span div:after,
-.form-radio-item:not(#foo) .form-checkbox + span:before,
-.form-checkbox-item:not(#foo) .form-checkbox + span:before,
-.form-radio-item:not(#foo) .form-checkbox + span:after,
-.form-checkbox-item:not(#foo) .form-checkbox + span:after {
-  display: none;
-}
-.form-radio-item:not(#foo) .form-radio:checked + label:before,
-.form-checkbox-item:not(#foo) .form-radio:checked + label:before,
-.form-radio-item:not(#foo) .form-radio:checked + span:before,
-.form-checkbox-item:not(#foo) .form-radio:checked + span:before,
-.form-radio-item:not(#foo) .form-checkbox + label:before,
-.form-checkbox-item:not(#foo) .form-checkbox + label:before,
-.form-radio-item:not(#foo) .form-radio + label:before,
-.form-checkbox-item:not(#foo) .form-radio + label:before,
-.form-radio-item:not(#foo) .form-radio + span:before,
-.form-checkbox-item:not(#foo) .form-radio + span:before,
-.form-radio-item:not(#foo) .form-checkbox:checked + label:before,
-.form-checkbox-item:not(#foo) .form-checkbox:checked + label:before,
-.form-radio-item:not(#foo) .form-checkbox:checked + span:before,
-.form-checkbox-item:not(#foo) .form-checkbox:checked + span:before,
-.form-radio-item:not(#foo) .form-checkbox:checked + span label:before,
-.form-checkbox-item:not(#foo) .form-checkbox:checked + span label:before,
-.form-radio-item:not(#foo) .form-checkbox + label:before,
-.form-checkbox-item:not(#foo) .form-checkbox + label:before,
-.form-radio-item:not(#foo) .form-checkbox + span:before,
-.form-checkbox-item:not(#foo) .form-checkbox + span:before {
-  border: none;
-  left: 7px;
-  background-color: transparent;
-}
-.form-radio-item:not(#foo) .form-radio + label:after,
-.form-checkbox-item:not(#foo) .form-radio + label:after,
-.form-radio-item:not(#foo) .form-checkbox + label:after,
-.form-checkbox-item:not(#foo) .form-checkbox + label:after,
-.form-radio-item:not(#foo) .form-checkbox + span :after,
-.form-checkbox-item:not(#foo) .form-checkbox + span :after {
-  opacity: 1;
-  transform: initial;
-}
-.form-radio-item:not(#foo) .form-radio-other,
-.form-checkbox-item:not(#foo) .form-radio-other,
-.form-radio-item:not(#foo) .form-checkbox-other,
-.form-checkbox-item:not(#foo) .form-checkbox-other {
-  display: inline-block;
-  margin-right: 13px;
-  margin-top: 0px;
-}
-.form-radio-item:not(#foo) .form-radio-item label,
-.form-checkbox-item:not(#foo) .form-radio-item label,
-.form-radio-item:not(#foo) .form-radio-item label,
-.form-checkbox-item:not(#foo) .form-radio-item label {
-  float: left;
-  margin-left: 0;
-  outline: none;
-}
-.form-radio-item:not(#foo) label:before,
-.form-checkbox-item:not(#foo) label:before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  vertical-align: baseline;
-  margin-right: 4px;
-  border-radius: 0%;
-  left: 4px;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-.form-radio-item:not(#foo) label:after,
-.form-checkbox-item:not(#foo) label:after {
-  content: '';
-  position: absolute;
-  z-index: 10;
-  display: inline-block;
-  top: 0px;
-  left: 9px;
-  width: 14px;
-  height: 14px;
-}
-.form-radio-item:not(#foo) input:checked + label:after,
-.form-checkbox-item:not(#foo) input:checked + label:after {
-  opacity: 1;
-}
-.form-radio-item:not(#foo) label:after {
-  background-color: #C3CAD8;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 1;
-}
-.form-radio-item:not(#foo) input:checked + label:after {
-  background-color: #119652;
-}
-.form-checkbox-item:not(#foo) label:after,
-.form-checkbox-item:not(#foo) input:checked + label:after {
-  display: inline-block;
-  transform: rotate(-45deg) !important;
-  height: 9px;
-  width: 14px;
-  border-radius: 2px;
-}
-.form-checkbox-item:not(#foo) label:after {
-  border-bottom: 4px solid #C3CAD8;
-  border-left: 4px solid #C3CAD8;
-}
-.form-checkbox-item:not(#foo) input:checked + label:after {
-  border-bottom: 4px solid #119652;
-  border-left: 4px solid #119652;
-}
-.submit-button {
-  font-size: 16px;
-  font-weight: normal;
-  font-family: "Inter", sans-serif;
-  border-color: #000000;
-}
-.submit-button {
-  min-width: 180px;
-}
-.form-submit-button:not(.form-sacl-button) {
-  color: #ffffff;
-  background: #119652;
-  box-shadow: none;
-  text-shadow: none;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  min-width: 128px;
-}
-li[data-type="control_image"] div {
-  text-align: left;
-}
-li[data-type="control_image"] img {
-  border: none;
-  border-width: 0px !important;
-  border-style: solid !important;
-  border-color: false !important;
-}
-.supernova {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.supernova {
-  background-image: none;
-}
-#stage {
-  background-image: none;
-}
-/* | */
-.form-all {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.form-header-group {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-}
-.header-large h1.form-header {
-  font-size: 2em;
-}
-.header-large h2.form-header {
-  font-size: 1.5em;
-}
-.header-large h3.form-header {
-  font-size: 1.17em;
-}
-.header-large h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-large h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-large h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-default h1.form-header {
-  font-size: 2em;
-}
-.header-default h2.form-header {
-  font-size: 1.5em;
-}
-.header-default h3.form-header {
-  font-size: 1.17em;
-}
-.header-default h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-default h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-default h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-small h1.form-header {
-  font-size: 2em;
-}
-.header-small h2.form-header {
-  font-size: 1.5em;
-}
-.header-small h3.form-header {
-  font-size: 1.17em;
-}
-.header-small h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-small h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-small h3 + .form-subHeader {
-  font-size: .75em;
-}
-.form-header-group {
-  text-align: left;
-}
-.form-header-group {
-  font-family: "Inter", sans-serif;
-}
-div.form-header-group.header-large {
-  margin: 0px -38px;
-}
-div.form-header-group.header-large {
-  padding: 40px 52px;
-}
-.form-header-group .form-header,
-.form-header-group .form-subHeader {
-  color: #064927;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-.form-line-error .form-error-message {
-  background-color: #f23a3c;
-  clear: both;
-  float: none;
-}
-.form-line-error .form-error-message .form-error-arrow {
-  border-bottom-color: #f23a3c;
-}
-.form-line-error input:not(#coupon-input),
-.form-line-error textarea,
-.form-line-error .form-validation-error {
-  border: 1px solid #f23a3c;
-  box-shadow: 0 0 3px #f23a3c;
-}
-.supernova {
-  background-color: #ffffff;
-  background-color: rgba(17, 150, 82, 0.16);
-}
-.supernova body {
-  background-color: transparent;
-}
-.supernova .form-all,
-.form-all {
-  background-color: #ffffff;
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-matrix-table tr {
-  border-color: #e6e6e6;
-}
-.form-matrix-table tr:nth-child(2n) {
-  background-color: #f2f2f2;
-}
-.form-all {
-  color: #06562d;
-}
-.form-label-top,
-.form-label-left,
-.form-label-right,
-.form-html {
-  color: #06562d;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-
-
-    /* Injected CSS Code */
-</style>
-
-<form class="jotform-form" action="https://submit.jotform.com/submit/222836263817461/" method="post" enctype="multipart/form-data" name="form_222836263817461" id="222836263817461" accept-charset="utf-8" autocomplete="on">
-  <input type="hidden" name="formID" value="222836263817461" />
-  <input type="hidden" id="JWTContainer" value="" />
-  <input type="hidden" id="cardinalOrderNumber" value="" />
-  <div role="main" class="form-all">
-    <style>
-      .form-all:before { background: none;}
+        JotForm.prepareCalculationsOnTheFly([null, null, {
+            "name": "submit",
+            "qid": "2",
+            "text": "Submit",
+            "type": "control_button"
+        }, {
+            "name": "clickTo",
+            "qid": "3",
+            "text": "New Job Application Form",
+            "type": "control_head"
+        }, {
+            "name": "fullName4",
+            "qid": "4",
+            "text": "Full Name",
+            "type": "control_fullname"
+        }, {
+            "name": "email5",
+            "qid": "5",
+            "subLabel": "example@example.com",
+            "text": "E-mail",
+            "type": "control_email"
+        }, {
+            "name": "phoneNumber6",
+            "qid": "6",
+            "text": "Phone Number",
+            "type": "control_phone"
+        }, null, {
+            "name": "availableStart8",
+            "qid": "8",
+            "text": "Available start date:",
+            "type": "control_datetime"
+        }, {
+            "name": "whatIs9",
+            "qid": "9",
+            "text": "What is your current employment status?",
+            "type": "control_radio"
+        }, {
+            "name": "howDo",
+            "qid": "10",
+            "text": "How do you prefer to submit your resume?",
+            "type": "control_radio"
+        }, {
+            "name": "uploadResume",
+            "qid": "11",
+            "text": "Upload Resume",
+            "type": "control_fileupload"
+        }, null, {
+            "name": "whatPosition",
+            "qid": "13",
+            "text": "What position are you applying for?",
+            "type": "control_dropdown"
+        }]);
+        setTimeout(function() {
+            JotForm.paymentExtrasOnTheFly([null, null, {
+                "name": "submit",
+                "qid": "2",
+                "text": "Submit",
+                "type": "control_button"
+            }, {
+                "name": "clickTo",
+                "qid": "3",
+                "text": "New Job Application Form",
+                "type": "control_head"
+            }, {
+                "name": "fullName4",
+                "qid": "4",
+                "text": "Full Name",
+                "type": "control_fullname"
+            }, {
+                "name": "email5",
+                "qid": "5",
+                "subLabel": "example@example.com",
+                "text": "E-mail",
+                "type": "control_email"
+            }, {
+                "name": "phoneNumber6",
+                "qid": "6",
+                "text": "Phone Number",
+                "type": "control_phone"
+            }, null, {
+                "name": "availableStart8",
+                "qid": "8",
+                "text": "Available start date:",
+                "type": "control_datetime"
+            }, {
+                "name": "whatIs9",
+                "qid": "9",
+                "text": "What is your current employment status?",
+                "type": "control_radio"
+            }, {
+                "name": "howDo",
+                "qid": "10",
+                "text": "How do you prefer to submit your resume?",
+                "type": "control_radio"
+            }, {
+                "name": "uploadResume",
+                "qid": "11",
+                "text": "Upload Resume",
+                "type": "control_fileupload"
+            }, null, {
+                "name": "whatPosition",
+                "qid": "13",
+                "text": "What position are you applying for?",
+                "type": "control_dropdown"
+            }]);
+        }, 20);
+    </script>
+    <style type="text/css">
+        @media print {
+            .form-section {
+                display: inline!important
+            }
+            .form-pagebreak {
+                display: none!important
+            }
+            .form-section-closed {
+                height: auto!important
+            }
+            .page-section {
+                position: initial!important
+            }
+        }
     </style>
-    <ul class="form-section page-section">
-      <li id="cid_3" class="form-input-wide" data-type="control_head">
-        <div style="display:table;width:100%">
-          <div class="form-header-group hasImage header-large" data-imagealign="Right">
-            <div class="header-text httac htvam">
-              <h1 id="header_3" class="form-header" data-component="header">
-                New Job Application Form
-              </h1>
-            </div>
-            <div class="header-logo">
-              <img src="https://www.jotform.com/uploads/waltermiller/form_files/Untitled%20design%20-%202022-04-20T155001.431.62600181879be5.37577021.png" alt="" width="200" class="header-logo-right" />
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_fullname" id="id_4">
-        <label class="form-label form-label-top" id="label_4" for="first_4"> Full Name </label>
-        <div id="cid_4" class="form-input-wide" data-layout="full">
-          <div data-wrapper-react="true">
-            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f30e2a790832f3e96009402" />
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.36360" />
+    <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.36360" />
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+        
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        
+        .form-all {
+            font-family: "Inter", sans-serif;
+        }
+        
+        .main .jotform-form {
+            width: 100%;
+            padding: 0 3%;
+        }
+        
+        .form-all {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 752px;
+        }
+        
+        .form-line-active {
+            background-color: #ffffe0;
+        }
+        
+        .form-all {
+            font-size: 16px;
+        }
+        
+        li.form-line {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .form-line {
+            padding: 12px 10px;
+        }
+        
+        .form-all .form-textbox,
+        .form-all .form-radio-other-input,
+        .form-all .form-checkbox-other-input,
+        .form-all .form-captcha input,
+        .form-all .form-spinner input,
+        .form-all .form-pagebreak-back,
+        .form-all .form-pagebreak-next,
+        .form-all .qq-upload-button,
+        .form-all .signature-wrapper,
+        .form-all .form-error-message {
+            border-radius: 0px;
+        }
+        
+        .form-all .form-textarea {
+            border-radius: 0px;
+        }
+        
+        .supernova .form-all,
+        .form-all {
+            border-radius: 20px;
+        }
+        
+        .form-section:first-child {
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .form-section:last-child {
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .form-section {
+            padding: 0px 38px;
+        }
+        
+        .form-textbox,
+        .form-textarea,
+        li[data-type=control_fileupload] .qq-upload-button,
+        .signature-wrapper {
+            border-width: 1px;
+            width: 100% !important;
+            border-style: solid;
+            border-color: #119652;
+            color: #05301a;
+        }
+        
+        .form-textarea:hover,
+        .form-textbox:hover,
+        li[data-type=control_fileupload] .qq-upload-button:hover,
+        .signature-wrapper:hover {
+            border-color: rgba(17, 150, 82, 0.5);
+            box-shadow: 0 0 0 2px rgba(17, 150, 82, 0.25);
+        }
+        
+        .form-textarea:focus,
+        .form-textbox:focus,
+        li[data-type=control_fileupload] .qq-upload-button:focus,
+        .signature-wrapper:focus {
+            border-color: #119652;
+            box-shadow: 0 0 0 3px rgba(17, 150, 82, 0.25);
+        }
+        
+        .form-textbox,
+        .form-textarea,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+            background-color: #ffffff;
+        }
+        
+        .form-label {
+            font-family: "Inter", sans-serif;
+        }
+        
+        .form-line-column {
+            width: calc(50% - 8px);
+        }
+        
+        .form-dropdown:first-child {
+            border-color: #119652;
+            color: #044323;
+        }
+        
+        .form-checkbox-item label,
+        .form-checkbox-item span,
+        .form-radio-item label,
+        .form-radio-item span {
+            color: #098646;
+        }
+        
+        .form-radio-item,
+        .form-checkbox-item {
+            padding-bottom: 0px !important;
+        }
+        
+        .form-radio-item:last-child,
+        .form-checkbox-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .form-single-column .form-checkbox-item,
+        .form-single-column .form-radio-item {
+            width: 100%;
+        }
+        
+        .form-checkbox-item .editor-container div,
+        .form-radio-item .editor-container div {
+            position: relative;
+        }
+        
+        .form-checkbox-item .editor-container div:before,
+        .form-radio-item .editor-container div:before {
+            display: inline-block;
+            vertical-align: middle;
+            left: 0;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .form-radio-item:not(#foo),
+        .form-checkbox-item:not(#foo) {
+            position: relative;
+        }
+        
+        .form-radio-item:not(#foo) .form-radio+span:before,
+        .form-checkbox-item:not(#foo) .form-radio+span:before,
+        .form-radio-item:not(#foo) .form-radio+span:after,
+        .form-checkbox-item:not(#foo) .form-radio+span:after,
+        .form-radio-item:not(#foo) .form-radio:checked+span div:after,
+        .form-checkbox-item:not(#foo) .form-radio:checked+span div:after,
+        .form-radio-item:not(#foo) .form-checkbox+span:before,
+        .form-checkbox-item:not(#foo) .form-checkbox+span:before,
+        .form-radio-item:not(#foo) .form-checkbox+span:after,
+        .form-checkbox-item:not(#foo) .form-checkbox+span:after {
+            display: none;
+        }
+        
+        .form-radio-item:not(#foo) .form-radio:checked+label:before,
+        .form-checkbox-item:not(#foo) .form-radio:checked+label:before,
+        .form-radio-item:not(#foo) .form-radio:checked+span:before,
+        .form-checkbox-item:not(#foo) .form-radio:checked+span:before,
+        .form-radio-item:not(#foo) .form-checkbox+label:before,
+        .form-checkbox-item:not(#foo) .form-checkbox+label:before,
+        .form-radio-item:not(#foo) .form-radio+label:before,
+        .form-checkbox-item:not(#foo) .form-radio+label:before,
+        .form-radio-item:not(#foo) .form-radio+span:before,
+        .form-checkbox-item:not(#foo) .form-radio+span:before,
+        .form-radio-item:not(#foo) .form-checkbox:checked+label:before,
+        .form-checkbox-item:not(#foo) .form-checkbox:checked+label:before,
+        .form-radio-item:not(#foo) .form-checkbox:checked+span:before,
+        .form-checkbox-item:not(#foo) .form-checkbox:checked+span:before,
+        .form-radio-item:not(#foo) .form-checkbox:checked+span label:before,
+        .form-checkbox-item:not(#foo) .form-checkbox:checked+span label:before,
+        .form-radio-item:not(#foo) .form-checkbox+label:before,
+        .form-checkbox-item:not(#foo) .form-checkbox+label:before,
+        .form-radio-item:not(#foo) .form-checkbox+span:before,
+        .form-checkbox-item:not(#foo) .form-checkbox+span:before {
+            border: none;
+            left: 7px;
+            background-color: transparent;
+        }
+        
+        .form-radio-item:not(#foo) .form-radio+label:after,
+        .form-checkbox-item:not(#foo) .form-radio+label:after,
+        .form-radio-item:not(#foo) .form-checkbox+label:after,
+        .form-checkbox-item:not(#foo) .form-checkbox+label:after,
+        .form-radio-item:not(#foo) .form-checkbox+span :after,
+        .form-checkbox-item:not(#foo) .form-checkbox+span :after {
+            opacity: 1;
+            transform: initial;
+        }
+        
+        .form-radio-item:not(#foo) .form-radio-other,
+        .form-checkbox-item:not(#foo) .form-radio-other,
+        .form-radio-item:not(#foo) .form-checkbox-other,
+        .form-checkbox-item:not(#foo) .form-checkbox-other {
+            display: inline-block;
+            margin-right: 13px;
+            margin-top: 0px;
+        }
+        
+        .form-radio-item:not(#foo) .form-radio-item label,
+        .form-checkbox-item:not(#foo) .form-radio-item label,
+        .form-radio-item:not(#foo) .form-radio-item label,
+        .form-checkbox-item:not(#foo) .form-radio-item label {
+            float: left;
+            margin-left: 0;
+            outline: none;
+        }
+        
+        .form-radio-item:not(#foo) label:before,
+        .form-checkbox-item:not(#foo) label:before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-right: 4px;
+            border-radius: 0%;
+            left: 4px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .form-radio-item:not(#foo) label:after,
+        .form-checkbox-item:not(#foo) label:after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            display: inline-block;
+            top: 0px;
+            left: 9px;
+            width: 14px;
+            height: 14px;
+        }
+        
+        .form-radio-item:not(#foo) input:checked+label:after,
+        .form-checkbox-item:not(#foo) input:checked+label:after {
+            opacity: 1;
+        }
+        
+        .form-radio-item:not(#foo) label:after {
+            background-color: #C3CAD8;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 1;
+        }
+        
+        .form-radio-item:not(#foo) input:checked+label:after {
+            background-color: #119652;
+        }
+        
+        .form-checkbox-item:not(#foo) label:after,
+        .form-checkbox-item:not(#foo) input:checked+label:after {
+            display: inline-block;
+            transform: rotate(-45deg) !important;
+            height: 9px;
+            width: 14px;
+            border-radius: 2px;
+        }
+        
+        .form-checkbox-item:not(#foo) label:after {
+            border-bottom: 4px solid #C3CAD8;
+            border-left: 4px solid #C3CAD8;
+        }
+        
+        .form-checkbox-item:not(#foo) input:checked+label:after {
+            border-bottom: 4px solid #119652;
+            border-left: 4px solid #119652;
+        }
+        
+        .submit-button {
+            font-size: 16px;
+            font-weight: normal;
+            font-family: "Inter", sans-serif;
+            border-color: #000000;
+        }
+        
+        .submit-button {
+            min-width: 180px;
+        }
+        
+        .form-submit-button:not(.form-sacl-button) {
+            color: #ffffff;
+            background: #119652;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        
+        .form-all .form-pagebreak-back,
+        .form-all .form-pagebreak-next {
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .form-all .form-pagebreak-back,
+        .form-all .form-pagebreak-next {
+            min-width: 128px;
+        }
+        
+        li[data-type="control_image"] div {
+            text-align: left;
+        }
+        
+        li[data-type="control_image"] img {
+            border: none;
+            border-width: 0px !important;
+            border-style: solid !important;
+            border-color: false !important;
+        }
+        
+        .supernova {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center top;
+            background-repeat: repeat;
+        }
+        
+        .supernova {
+            background-image: none;
+        }
+        
+        #stage {
+            background-image: none;
+        }
+        /* | */
+        
+        .form-all {
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center top;
+            background-repeat: repeat;
+        }
+        
+        .form-header-group {
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center top;
+        }
+        
+        .header-large h1.form-header {
+            font-size: 2em;
+        }
+        
+        .header-large h2.form-header {
+            font-size: 1.5em;
+        }
+        
+        .header-large h3.form-header {
+            font-size: 1.17em;
+        }
+        
+        .header-large h1+.form-subHeader {
+            font-size: 1em;
+        }
+        
+        .header-large h2+.form-subHeader {
+            font-size: .875em;
+        }
+        
+        .header-large h3+.form-subHeader {
+            font-size: .75em;
+        }
+        
+        .header-default h1.form-header {
+            font-size: 2em;
+        }
+        
+        .header-default h2.form-header {
+            font-size: 1.5em;
+        }
+        
+        .header-default h3.form-header {
+            font-size: 1.17em;
+        }
+        
+        .header-default h1+.form-subHeader {
+            font-size: 1em;
+        }
+        
+        .header-default h2+.form-subHeader {
+            font-size: .875em;
+        }
+        
+        .header-default h3+.form-subHeader {
+            font-size: .75em;
+        }
+        
+        .header-small h1.form-header {
+            font-size: 2em;
+        }
+        
+        .header-small h2.form-header {
+            font-size: 1.5em;
+        }
+        
+        .header-small h3.form-header {
+            font-size: 1.17em;
+        }
+        
+        .header-small h1+.form-subHeader {
+            font-size: 1em;
+        }
+        
+        .header-small h2+.form-subHeader {
+            font-size: .875em;
+        }
+        
+        .header-small h3+.form-subHeader {
+            font-size: .75em;
+        }
+        
+        .form-header-group {
+            text-align: left;
+        }
+        
+        .form-header-group {
+            font-family: "Inter", sans-serif;
+        }
+        
+        div.form-header-group.header-large {
+            margin: 0px -38px;
+        }
+        
+        div.form-header-group.header-large {
+            padding: 40px 52px;
+        }
+        
+        .form-header-group .form-header,
+        .form-header-group .form-subHeader {
+            color: #064927;
+        }
+        
+        .form-line-error {
+            overflow: hidden;
+            -webkit-transition-property: none;
+            -moz-transition-property: none;
+            -ms-transition-property: none;
+            -o-transition-property: none;
+            transition-property: none;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -ms-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease;
+            -moz-transition-timing-function: ease;
+            -ms-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+            background-color: #fff4f4;
+        }
+        
+        .form-line-error .form-error-message {
+            background-color: #f23a3c;
+            clear: both;
+            float: none;
+        }
+        
+        .form-line-error .form-error-message .form-error-arrow {
+            border-bottom-color: #f23a3c;
+        }
+        
+        .form-line-error input:not(#coupon-input),
+        .form-line-error textarea,
+        .form-line-error .form-validation-error {
+            border: 1px solid #f23a3c;
+            box-shadow: 0 0 3px #f23a3c;
+        }
+        
+        .supernova {
+            background-color: #ffffff;
+            background-color: rgba(17, 150, 82, 0.16);
+        }
+        
+        .supernova body {
+            background-color: transparent;
+        }
+        
+        .supernova .form-all,
+        .form-all {
+            background-color: #ffffff;
+        }
+        
+        .form-textbox,
+        .form-textarea,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+            background-color: #ffffff;
+        }
+        
+        .form-matrix-table tr {
+            border-color: #e6e6e6;
+        }
+        
+        .form-matrix-table tr:nth-child(2n) {
+            background-color: #f2f2f2;
+        }
+        
+        .form-all {
+            color: #06562d;
+        }
+        
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html {
+            color: #06562d;
+        }
+        
+        .form-line-error {
+            overflow: hidden;
+            -webkit-transition-property: none;
+            -moz-transition-property: none;
+            -ms-transition-property: none;
+            -o-transition-property: none;
+            transition-property: none;
+            -webkit-transition-duration: 0.3s;
+            -moz-transition-duration: 0.3s;
+            -ms-transition-duration: 0.3s;
+            -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease;
+            -moz-transition-timing-function: ease;
+            -ms-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+            background-color: #fff4f4;
+        }
+        /* Injected CSS Code */
+    </style>
+
+    <form class="jotform-form" action="https://submit.jotform.com/submit/222836263817461/" method="post" enctype="multipart/form-data" name="form_222836263817461" id="222836263817461" accept-charset="utf-8" autocomplete="on">
+        <input type="hidden" name="formID" value="222836263817461" />
+        <input type="hidden" id="JWTContainer" value="" />
+        <input type="hidden" id="cardinalOrderNumber" value="" />
+        <div role="main" class="form-all">
+            <style>
+                .form-all:before {
+                    background: none;
+                }
+            </style>
+            <ul class="form-section page-section">
+                <li id="cid_3" class="form-input-wide" data-type="control_head">
+                    <div style="display:table;width:100%">
+                        <div class="form-header-group hasImage header-large" data-imagealign="Right">
+                            <div class="header-text httac htvam">
+                                <h1 id="header_3" class="form-header" data-component="header">
+                                    New Job Application Form
+                                </h1>
+                            </div>
+                            <div class="header-logo">
+                                <img src="https://www.jotform.com/uploads/waltermiller/form_files/Untitled%20design%20-%202022-04-20T155001.431.62600181879be5.37577021.png" alt="" width="200" class="header-logo-right" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_fullname" id="id_4">
+                    <label class="form-label form-label-top" id="label_4" for="first_4"> Full Name </label>
+                    <div id="cid_4" class="form-input-wide" data-layout="full">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
               <input type="text" id="first_4" name="q4_fullName4[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 given-name" size="10" value="" data-component="first" aria-labelledby="label_4 sublabel_4_first" />
               <label class="form-sub-label" for="first_4" id="sublabel_4_first" style="min-height:13px" aria-hidden="false"> First Name </label>
             </span>
-            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
               <input type="text" id="last_4" name="q4_fullName4[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_4 family-name" size="15" value="" data-component="last" aria-labelledby="label_4 sublabel_4_last" />
               <label class="form-sub-label" for="last_4" id="sublabel_4_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
             </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_5">
-        <label class="form-label form-label-top" id="label_5" for="input_5"> E-mail </label>
-        <div id="cid_5" class="form-input-wide" data-layout="half">
-          <span class="form-sub-label-container" style="vertical-align:top">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_5">
+                    <label class="form-label form-label-top" id="label_5" for="input_5"> E-mail </label>
+                    <div id="cid_5" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
             <input type="email" id="input_5" name="q5_email5" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_5 sublabel_input_5" />
             <label class="form-sub-label" for="input_5" id="sublabel_input_5" style="min-height:13px" aria-hidden="false"> example@example.com </label>
           </span>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-2" data-type="control_phone" id="id_6">
-        <label class="form-label form-label-top" id="label_6" for="input_6_full"> Phone Number </label>
-        <div id="cid_6" class="form-input-wide" data-layout="half">
-          <span class="form-sub-label-container" style="vertical-align:top">
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-2" data-type="control_phone" id="id_6">
+                    <label class="form-label form-label-top" id="label_6" for="input_6_full"> Phone Number </label>
+                    <div id="cid_6" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
             <input type="tel" id="input_6_full" name="q6_phoneNumber6[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_6 tel-national" style="width:310px" data-masked="true" value="" placeholder="(+91) 0000000000" data-component="phone" aria-labelledby="label_6" />
             <label class="form-sub-label is-empty" for="input_6_full" id="sublabel_6_masked" style="min-height:13px" aria-hidden="false">  </label>
           </span>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-3" data-type="control_dropdown" id="id_13">
-        <label class="form-label form-label-top" id="label_13" for="input_13"> What position are you applying for? </label>
-        <div id="cid_13" class="form-input-wide" data-layout="half">
-          <select class="form-dropdown" id="input_13" name="q13_whatPosition" style="width:310px" data-component="dropdown">
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-3" data-type="control_dropdown" id="id_13">
+                    <label class="form-label form-label-top" id="label_13" for="input_13"> What position are you applying for? </label>
+                    <div id="cid_13" class="form-input-wide" data-layout="half">
+                        <select class="form-dropdown" id="input_13" name="q13_whatPosition" style="width:310px" data-component="dropdown">
             <option value=""> Please Select </option>
             <option value="Job 1"> Job 1 </option>
             <option value="Job 2"> Job 2 </option>
             <option value="Job 3"> Job 3 </option>
           </select>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-4" data-type="control_datetime" id="id_8">
-        <label class="form-label form-label-top" id="label_8" for="lite_mode_8"> Available start date: </label>
-        <div id="cid_8" class="form-input-wide" data-layout="half">
-          <div data-wrapper-react="true">
-            <div style="display:none">
-              <span class="form-sub-label-container" style="vertical-align:top">
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-4" data-type="control_datetime" id="id_8">
+                    <label class="form-label form-label-top" id="label_8" for="lite_mode_8"> Available start date: </label>
+                    <div id="cid_8" class="form-input-wide" data-layout="half">
+                        <div data-wrapper-react="true">
+                            <div style="display:none">
+                                <span class="form-sub-label-container" style="vertical-align:top">
                 <input type="tel" class="form-textbox validate[limitDate]" id="month_8" name="q8_availableStart8[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_8 off" aria-labelledby="label_8 sublabel_8_month" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
-                <label class="form-sub-label" for="month_8" id="sublabel_8_month" style="min-height:13px" aria-hidden="false"> Month </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top">
+                                <label class="form-sub-label" for="month_8" id="sublabel_8_month" style="min-height:13px" aria-hidden="false"> Month </label>
+                                </span>
+                                <span class="form-sub-label-container" style="vertical-align:top">
                 <input type="tel" class="form-textbox validate[limitDate]" id="day_8" name="q8_availableStart8[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_8 off" aria-labelledby="label_8 sublabel_8_day" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
-                <label class="form-sub-label" for="day_8" id="sublabel_8_day" style="min-height:13px" aria-hidden="false"> Day </label>
-              </span>
-              <span class="form-sub-label-container" style="vertical-align:top">
+                                <label class="form-sub-label" for="day_8" id="sublabel_8_day" style="min-height:13px" aria-hidden="false"> Day </label>
+                                </span>
+                                <span class="form-sub-label-container" style="vertical-align:top">
                 <input type="tel" class="form-textbox validate[limitDate]" id="year_8" name="q8_availableStart8[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="section-input_8 off" aria-labelledby="label_8 sublabel_8_year" />
                 <label class="form-sub-label" for="year_8" id="sublabel_8_year" style="min-height:13px" aria-hidden="false"> Year </label>
               </span>
-            </div>
-            <span class="form-sub-label-container" style="vertical-align:top">
+                            </div>
+                            <span class="form-sub-label-container" style="vertical-align:top">
               <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_8" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="section-input_8 off" aria-labelledby="label_8 sublabel_8_litemode" />
               <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_8_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" />
               <label class="form-sub-label" for="lite_mode_8" id="sublabel_8_litemode" style="min-height:13px" aria-hidden="false"> Date </label>
             </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_radio" id="id_9">
-        <label class="form-label form-label-top" id="label_9" for="input_9"> What is your current employment status? </label>
-        <div id="cid_9" class="form-input-wide" data-layout="full">
-          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_9" data-component="radio">
-            <span class="form-radio-item">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_radio" id="id_9">
+                    <label class="form-label form-label-top" id="label_9" for="input_9"> What is your current employment status? </label>
+                    <div id="cid_9" class="form-input-wide" data-layout="full">
+                        <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_9" data-component="radio">
+                            <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_0" name="q9_whatIs9" value="Employed" />
-              <label id="label_input_9_0" for="input_9_0"> Employed </label>
-            </span>
-            <span class="form-radio-item">
+                            <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_0" name="q9_whatIs9" value="Employed" />
+                            <label id="label_input_9_0" for="input_9_0"> Employed </label>
+                            </span>
+                            <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_1" name="q9_whatIs9" value="Unemployed" />
-              <label id="label_input_9_1" for="input_9_1"> Unemployed </label>
-            </span>
-            <span class="form-radio-item" style="clear:left">
+                            <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_1" name="q9_whatIs9" value="Unemployed" />
+                            <label id="label_input_9_1" for="input_9_1"> Unemployed </label>
+                            </span>
+                            <span class="form-radio-item" style="clear:left">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_2" name="q9_whatIs9" value="Self-Employed" />
-              <label id="label_input_9_2" for="input_9_2"> Self-Employed </label>
-            </span>
-            <span class="form-radio-item">
+                            <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_2" name="q9_whatIs9" value="Self-Employed" />
+                            <label id="label_input_9_2" for="input_9_2"> Self-Employed </label>
+                            </span>
+                            <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_3" name="q9_whatIs9" value="Student" />
-              <label id="label_input_9_3" for="input_9_3"> Student </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_radio" id="id_10">
-        <label class="form-label form-label-top" id="label_10" for="input_10"> How do you prefer to submit your resume? </label>
-        <div id="cid_10" class="form-input-wide" data-layout="full">
-          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_10" data-component="radio">
-            <span class="form-radio-item">
+                            <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_3" name="q9_whatIs9" value="Student" />
+                            <label id="label_input_9_3" for="input_9_3"> Student </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_radio" id="id_10">
+                    <label class="form-label form-label-top" id="label_10" for="input_10"> How do you prefer to submit your resume? </label>
+                    <div id="cid_10" class="form-input-wide" data-layout="full">
+                        <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_10" data-component="radio">
+                            <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_0" name="q10_howDo" value="Upload File" />
-              <label id="label_input_10_0" for="input_10_0"> Upload File </label>
-            </span>
-            <span class="form-radio-item">
+                            <input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_0" name="q10_howDo" value="Upload File" />
+                            <label id="label_input_10_0" for="input_10_0"> Upload File </label>
+                            </span>
+                            <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_1" name="q10_howDo" value="Provide URL" />
-              <label id="label_input_10_1" for="input_10_1"> Provide URL </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_fileupload" id="id_11">
-        <label class="form-label form-label-top" id="label_11" for="input_11"> Upload Resume </label>
-        <div id="cid_11" class="form-input-wide" data-layout="full">
-          <div class="jfQuestion-fields" data-wrapper-react="true">
-            <div class="jfField isFilled">
-              <div class="jfUpload-wrapper">
-                <div class="jfUpload-container">
-                  <div class="jfUpload-text-container">
-                    <div class="jfUpload-icon forDesktop">
-                      <span class="iconSvg  dhtupload ">
+                            <input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_1" name="q10_howDo" value="Provide URL" />
+                            <label id="label_input_10_1" for="input_10_1"> Provide URL </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_fileupload" id="id_11">
+                    <label class="form-label form-label-top" id="label_11" for="input_11"> Upload Resume </label>
+                    <div id="cid_11" class="form-input-wide" data-layout="full">
+                        <div class="jfQuestion-fields" data-wrapper-react="true">
+                            <div class="jfField isFilled">
+                                <div class="jfUpload-wrapper">
+                                    <div class="jfUpload-container">
+                                        <div class="jfUpload-text-container">
+                                            <div class="jfUpload-icon forDesktop">
+                                                <span class="iconSvg  dhtupload ">
                         <svg viewBox="0 0 54 47" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <g stroke="none" strokeWidth="1" fill="none">
                             <g transform="translate(-1506.000000, -2713.000000)">
@@ -688,67 +938,68 @@ div.form-header-group.header-large {
                           </g>
                         </svg>
                       </span>
-                    </div>
-                  </div>
-                  <div class="jfUpload-button-container">
-                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">
-                      Upload a File
-                      <div class="jfUpload-heading forDesktop">
-                        Drag and drop files here
-                      </div>
-                      <div class="jfUpload-heading forMobile">
-                        Choose a file
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="jfUpload-files-container">
-                  <input type="file" id="input_11" name="q11_uploadResume[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10240" data-file-minsize="0" data-file-limit="0" data-component="fileupload" aria-label="Upload a File" />
-                </div>
-              </div>
-              <div data-wrapper-react="true">
-              </div>
-            </div>
-            <span style="display:none" class="cancelText">
+                                            </div>
+                                        </div>
+                                        <div class="jfUpload-button-container">
+                                            <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">
+                                                Upload a File
+                                                <div class="jfUpload-heading forDesktop">
+                                                    Drag and drop files here
+                                                </div>
+                                                <div class="jfUpload-heading forMobile">
+                                                    Choose a file
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jfUpload-files-container">
+                                        <input type="file" id="input_11" name="q11_uploadResume[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10240"
+                                            data-file-minsize="0" data-file-limit="0" data-component="fileupload" aria-label="Upload a File" />
+                                    </div>
+                                </div>
+                                <div data-wrapper-react="true">
+                                </div>
+                            </div>
+                            <span style="display:none" class="cancelText">
               Cancel
             </span>
-            <span style="display:none" class="ofText">
+                            <span style="display:none" class="ofText">
               of
             </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_button" id="id_2">
-        <div id="cid_2" class="form-input-wide" data-layout="full">
-          <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_orange submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_button" id="id_2">
+                    <div id="cid_2" class="form-input-wide" data-layout="full">
+                        <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+                            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_orange submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
               Submit
             </button>
-          </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="display:none">
+                    Should be Empty:
+                    <input type="text" name="website" value="" />
+                </li>
+            </ul>
         </div>
-      </li>
-      <li style="display:none">
-        Should be Empty:
-        <input type="text" name="website" value="" />
-      </li>
-    </ul>
-  </div>
-  <script>
-  JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <script>
-  JotForm.poweredByText = "Powered by Jotform";
-  </script>
-  <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="222836263817461" />
-  <script type="text/javascript">
-  var all_spc = document.querySelectorAll("form[id='222836263817461'] .si" + "mple" + "_spc");
-for (var i = 0; i < all_spc.length; i++)
-{
-  all_spc[i].value = "222836263817461-222836263817461";
-}
-  </script>
-</form>
-<script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.36360"></script>
-<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.36360"></script>
+        <script>
+            JotForm.showJotFormPowered = "new_footer";
+        </script>
+        <script>
+            JotForm.poweredByText = "Powered by Jotform";
+        </script>
+        <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="222836263817461" />
+        <script type="text/javascript">
+            var all_spc = document.querySelectorAll("form[id='222836263817461'] .si" + "mple" + "_spc");
+            for (var i = 0; i < all_spc.length; i++) {
+                all_spc[i].value = "222836263817461-222836263817461";
+            }
+        </script>
+    </form>
+    <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.36360"></script>
+    <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.36360"></script>
 </body>
+
 </html>
