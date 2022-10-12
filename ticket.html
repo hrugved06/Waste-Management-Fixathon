@@ -167,30 +167,49 @@
 					name="recommed">Maybe</input>
 			</label>
         </div>
-
         <div class="form-control">
-            <label for="comment">
-				Your Comments/Suggestions are highly appreciated!
+            <div class="card" style="background-color:inherit;">
+                <div class="card-body">
+                    <label for="comment">
+                Please Enter Your Full Address
 			</label>
-            <textarea name="comment" id="comment" placeholder="Enter your comment here">
-			</textarea>
-        </div>
-        <div class="row">
-            <a class="btn btn-warning col-md-5 m-3" href="./index.html">Back</a>
-            <a class="btn btn-success col-md-5 m-3" data-toggle="modal" data-target="#exampleModal" href="./ticket.html">Submit</a>
-        </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        Your data has been submitted, a collector will be contacting you soon.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <textarea name="comment" id="comment" placeholder="Enter your comment here">
+            </textarea>
+                    <div class="row">
+                        <div class="col-12 text-center mt-5">
+                            OR
+                        </div>
+                        <div class="col-12 text-center mt-0">
+                            <a class="m-0" href="#">
+                                <button type="submit" class="btn btn-outline-primary" id="submit" style="font-size:20px"><i class="fa fa-1x fa-map-marker mr-2"></i>Get Location</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="form-control">
+                <label for="comment">
+				Your Comments/Suggestions are highly appreciated!
+			</label>
+                <textarea name="comment" id="comment" placeholder="Enter your comment here">
+			</textarea>
+            </div>
+            <div class="row">
+                <a class="btn btn-warning col-md-5 m-3" href="./index.html">Back</a>
+                <a class="btn btn-success col-md-5 m-3" data-toggle="modal" data-target="#exampleModal" href="./ticket.html">Submit</a>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            Your data has been submitted, a collector will be contacting you soon.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </form>
 </body>
