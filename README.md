@@ -1,5 +1,6 @@
 # WasteWise
-<img src="./Resources/logo-final.png" style="background-color : white;">
+
+<img src="https://i.ibb.co/sbpWTXP/logo-final.png" style="background-color : white;">
 
 <hr>
 
