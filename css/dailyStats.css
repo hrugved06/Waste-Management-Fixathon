@@ -202,3 +202,17 @@ body {
         transition-duration: 0s;
     }
 }
+
+.mybtn-1 {
+    color: white;
+    background-color: #160E37;
+    text-decoration: none;
+    background: linear-gradient(45deg, #4635B9, #160E37, #4635B9);
+}
+
+.mybtn-1:hover {
+    color: white;
+    background-color: #3c2693;
+    text-decoration: none;
+    background: linear-gradient(45deg, #160E37, #4635B9, #160E37);
+}
