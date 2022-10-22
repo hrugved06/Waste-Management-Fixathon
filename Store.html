@@ -43,9 +43,6 @@
             <li class="nav-item">
                 <a class="nav-link " href="./Contact.html ">Contact Us</a>
             </li>
-            <li>
-                <a class="btn mybtn-1" href="./login/index.html">LOG IN</a>
-            </li>
         </ul>
     </nav>
     <div class="jumbotron mb-0">
@@ -60,12 +57,6 @@
             <div class="col-md-12 lead p-4 mt-0 text-center font-weight-bold">Welcome To Our Store</div>
             <div class="col-md-12 mt-0 text-center font-weight-bold">Here you can buy products that are made from the waste products collected by us.</div>
         </div>
-        <div class="col-12 text-center text-danger">
-            <i class="fa fa-exclamation mt-4">
-            </i> Login To check Your Waste Points.
-            <i class="fa fa-exclamation">
-            </i>
-        </div>
         <div class="row m-5">
             <div class="col-md-4 mb-3">
                 <div class="card">
@@ -73,7 +64,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Nature Friendly Cuttlery Set</h5>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo repellat, beatae deleniti earum nemo mollitia et. Quo repellendus illum eligendi, alias deleniti vero optio ab adipisci, perspiciatis tenetur id sit!</p>
-                        <p class="card-text"><small class="text-muted">Price : 100 Waste Points</small></p>
+                        <p class="card-text row">
+                            <small class="text-muted col-8 mt-1">Price : 100 Waste Points</small>
+                            <a class="col-4 btn btn-sm mybtn-1" style="color: white; opacity:1;" data-toggle="modal" data-target="#myMsg" href="./Store.html">Buy</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -83,7 +77,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Delivery Boxes</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, aliquam iusto facere soluta, maiores suscipit tenetur sunt ratione libero delectus dolorum velit laudantium, architecto unde hic voluptate porro! Expedita, placeat.</p>
-                        <p class="card-text"><small class="text-muted">Price : 100 Waste Points</small></p>
+                        <p class="card-text row">
+                            <small class="text-muted col-8 mt-1">Price : 100 Waste Points</small>
+                            <a class="col-4 btn btn-sm mybtn-1" style="color: white; opacity:1;" data-toggle="modal" data-target="#myMsg2" href="./Store.html">Buy</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -93,7 +90,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Daily Products</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, obcaecati cum nisi sint molestias autem debitis sed at exercitationem quisquam quam sit, nobis voluptatibus esse doloremque, ad dicta ab dolores</p>
-                        <p class="card-text"><small class="text-muted">Price : 100 Waste Points</small></p>
+                        <p class="card-text row">
+                            <small class="text-muted col-8 mt-1">Price : 100 Waste Points</small>
+                            <a class="col-4 btn btn-sm mybtn-1" style="color: white; opacity:1;" data-toggle="modal" data-target="#myMsg" href="./Store.html">Buy</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Recycled Clothes</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestiae labore itaque, ullam non, et ratione veniam sed corporis dolore dolorum doloribus sapiente dicta? Voluptatibus minus voluptates veritatis tempora doloribus?</p>
-                        <p class="card-text"><small class="text-muted">Price : 100 Waste Points</small></p>
+                        <p class="card-text row">
+                            <small class="text-muted col-8 mt-1">Price : 100 Waste Points</small>
+                            <a class="col-4 btn btn-sm mybtn-1" style="color: white; opacity:1;" data-toggle="modal" data-target="#myMsg" href="./Store.html">Buy</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -115,6 +118,62 @@
         </div>
     </div>
 </body>
+<div class="modal fade" id="myMsg" tabindex="-1" role="dialog" aria-labelledby="myMsg" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- Confirmation Feild -->
+                <div class="container bg-gradient">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-center p-3 text-success">Confirmation</h3>
+                            <table class="table">
+                                <tr>
+                                    <td>Product Name</td>
+                                    <td>Nature Friendly Cuttlery Set</td>
+                                </tr>
+                                <tr>
+                                    <td>Price</td>
+                                    <td>100 Points</td>
+                                </tr>
+                                <tr>
+                                    <td>Your Balance</td>
+                                    <td>240 Points</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" modal-footer ">
+                <button type="button " class="btn btn-outline-success col-6" data-dismiss="modal">Confirm Order</button>
+                <button type="button " class="btn btn-outline-secondary col-6" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myMsg2" tabindex="-1" role="dialog" aria-labelledby="myMsg" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <i class="fa fa-exclamation-circle fa-5x text-danger"></i>
+                    </div>
+                    <div class="col-12 text-center">
+                        <h3 class="text-danger">Login To Buy</h3>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-danger" href="./login/index.html">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" modal-footer ">
+                <button type="button " class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <link rel="icon " href="./Resources/waste recycle.jpg " type="image/icon type ">
 <link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css " />
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
