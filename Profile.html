@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./Resources/Logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12 text-center heading p-3">User Profile </div>
+    </div>
+    <div class="row my-breadcrumb">
+        <ol class="col-11 breadcrumb col-md-offset">
+            <li class="breadcrumb-item"><a href="./index2.html">Home</a></li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 text-center">
+                <img class="m-auto img-fluid p-3" src="./Resources/user.png" alt="Logo">
+                <table class="table table-borderless">
+                    <tbody class="m-0 p-0">
+                        <tr>
+                            <td>Name</td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>1234, Street, City, State, Country</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>1234567890</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>example@xyz.abc</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- CreateEdit Button -->
+                <button type="button" class="btn btn-info btn-block disabled" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Edit Profile
+                </button>
+            </div>
+            <div class="col-9">
+                <div class="m-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" id="myTab">
+                                <li class="nav-item">
+                                    <a href="#home" class="nav-link active" data-bs-toggle="tab">Information</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#billing" class="nav-link" data-bs-toggle="tab">Billing <i class="fa fa-money"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#wastegenerated" class="nav-link" data-bs-toggle="tab">My Total Waste</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#notification" class="nav-link" data-bs-toggle="tab">Notifications</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="home">
+                                    <h5 class="card-title">Info</h5>
+                                    <table class="table table-borderless">
+                                        <tbody class="m-0 p-0">
+                                            <tr>
+                                                <td>Total Waste Points</td>
+                                                <td>100</td>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Since</td>
+                                                <td>11-10-2021</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last Garbage Pickup</td>
+                                                <td>11-12-2021</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nearest Waste Point</td>
+                                                <td>1123 St Abc </td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Waste Category</td>
+                                                <td>Category-2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="./Store.html"><button type="button" class="btn btn-info btn-block">Redeem Points</button></a>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <h5 class="card-title">Profile tab content</h5>
+                                    <p class="card-text">Here is some example text to make up the tab's content. Replace it with your own text anytime.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="tab-pane fade" id="billing">
+                                    <button class="btn btn-outline-info">
+                                        Add Payment Method
+                                    </button>
+                                </div>
+                                <div class="tab-pane fade" id="notification">
+                                    <div class="alert alert-success" role="alert">
+                                        <!-- Alerts Example -->
+                                        <p>Your Pickup Request has been Received A collector will be contacting you soon</p>
+                                        <hr>
+                                        <p>Your Waste Packet id #3225 Has been received</p>
+                                    </div>
+                                    <a>
+                                        <button class="btn btn-outline-info">
+                                                Clear All
+                                            </button>
+                                    </a>
+                                </div>
+                                <div class="tab-pane fade" id="wastegenerated">
+                                    <h5 class="card-title">Waste Generated By Me</h5>
+                                    <table class="table table-active">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Total Waste</th>
+                                                <td>96 kgs</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">Non Biodegradable</th>
+                                                <td>22 kgs</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">Biodegradable</th>
+                                                <td>76 kgs</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="alert alert-info" role="alert">
+                                        <h4 class="alert-heading">Disclaimer</h4>
+                                        <p>This Data is calculated on the basis of the waste generated by you in the last 90 days.</p>
+                                        <hr>
+                                        <a href="./TrackWaste.html" target="_blank" class="btn btn-info">View All Data Here <i class="fa fa-external-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
