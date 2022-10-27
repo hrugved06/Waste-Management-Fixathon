@@ -1,217 +1,789 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.36664" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.36664" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.36664" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.36664" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.36664" type="text/javascript"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+<script src="https://cdn03.jotfor.ms/js/jotStorage.js?v=3.3.36664" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/autoFill.min.js?v=3.3.36664" type="text/javascript"></script>
+<script type="text/javascript">
+    JotForm.newDefaultTheme = true;
+    JotForm.extendsNewTheme = false;
+    JotForm.singleProduct = false;
+    JotForm.newPaymentUIForNewCreatedForms = false;
+    JotForm.newPaymentUI = true;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Resources/Logo.png" type="image/icon type">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>
-        Ticket Generation
-    </title>
-    <style>
-        body {
-            background: linear-gradient(45deg, rgba(82, 0, 0, 0.5), rgba(151, 151, 151, 0.5), rgba(82, 0, 0, 0.5));
-            font-family: Verdana;
-            text-align: center;
+    JotForm.init(function() {
+        /*INIT-START*/
+        JotForm.setPhoneMaskingValidator('input_7_full', '(+91) #####-#####');
+        setTimeout(function() {
+            $('input_8').hint('ex: myname@example.com');
+        }, 20);
+
+        JotForm.calendarMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        JotForm.calendarDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        JotForm.calendarOther = {
+            "today": "Today"
+        };
+        var languageOptions = document.querySelectorAll('#langList li');
+        for (var langIndex = 0; langIndex < languageOptions.length; langIndex++) {
+            languageOptions[langIndex].on('click', function(e) {
+                setTimeout(function() {
+                    JotForm.setCalendar("14", false, {
+                        "days": {
+                            "monday": true,
+                            "tuesday": true,
+                            "wednesday": true,
+                            "thursday": true,
+                            "friday": true,
+                            "saturday": true,
+                            "sunday": true
+                        },
+                        "future": true,
+                        "past": true,
+                        "custom": false,
+                        "ranges": false,
+                        "start": "",
+                        "end": ""
+                    });
+                }, 0);
+            });
         }
-        
-        form {
-            background-color: gainsboro;
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 30px 20px;
-            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        JotForm.onTranslationsFetch(function() {
+            JotForm.setCalendar("14", false, {
+                "days": {
+                    "monday": true,
+                    "tuesday": true,
+                    "wednesday": true,
+                    "thursday": true,
+                    "friday": true,
+                    "saturday": true,
+                    "sunday": true
+                },
+                "future": true,
+                "past": true,
+                "custom": false,
+                "ranges": false,
+                "start": "",
+                "end": ""
+            });
+        });
+        JotForm.formatDate({
+            date: (new Date()),
+            dateField: $("id_" + 14)
+        });
+        JotForm.displayLocalTime("input_14_hourSelect", "input_14_minuteSelect", "input_14_ampm", "input_14_timeInput", false);
+        productID = {
+            "0": "input_24_1000",
+            "1": "input_24_1001",
+            "2": "input_24_1002"
+        };
+        paymentType = "product";
+        JotForm.setCurrencyFormat('USD', true, 'point');
+        JotForm.totalCounter({
+            "input_24_1000": {
+                "price": "10",
+                "quantityField": "input_24_quantity_1000_0"
+            },
+            "input_24_1001": {
+                "price": "012",
+                "custom_0": "input_24_custom_1001_0",
+                "quantityField": "input_24_quantity_1001_1"
+            },
+            "input_24_1002_0": {
+                "price": "0",
+                "child": true,
+                "specialPriceField": "input_24_1002_0",
+                "specialPriceList": ["2", "3", "4"],
+                "quantityField": "input_24_quantity_1002_0_0"
+            },
+            "input_24_1002_1": {
+                "price": "0",
+                "child": true,
+                "specialPriceField": "input_24_1002_1",
+                "specialPriceList": ["2", "3", "4"],
+                "quantityField": "input_24_quantity_1002_1_0"
+            },
+            "input_24_1002_2": {
+                "price": "0",
+                "child": true,
+                "specialPriceField": "input_24_1002_2",
+                "specialPriceList": ["2", "3", "4"],
+                "quantityField": "input_24_quantity_1002_2_0"
+            }
+        });
+        $$('.form-product-custom_quantity').each(function(el, i) {
+            el.observe('blur', function() {
+                isNaN(this.value) || this.value < 1 ? this.value = '0' : this.value = parseInt(this.value)
+            })
+        });
+        $$('.form-product-custom_quantity').each(function(el, i) {
+            el.observe('focus', function() {
+                this.value == 0 ? this.value = '' : this.value
+            })
+        });
+        if (typeof PaymentStock !== "undefined") {
+            PaymentStock.orderedSubproductOptionNames = {
+                "1002": ["Kind of Food"]
+            }
         }
-        
-        .form-control {
-            background-color: inherit;
-            text-align: left;
-            margin-bottom: 25px;
+        JotForm.handleProductLightbox();
+        if (window.JotForm && JotForm.accessible) $('input_26').setAttribute('tabindex', 0);
+        JotForm.setCustomHint('input_26', 'Type here...');
+        JotForm.alterTexts({
+            "couponApply": "Apply",
+            "couponBlank": "Please enter a coupon.",
+            "couponChange": "",
+            "couponEnter": "Enter coupon",
+            "couponExpired": "Coupon is expired. Please try another one.",
+            "couponInvalid": "Coupon is invalid.",
+            "couponValid": "Coupon is valid.",
+            "shippingShipping": "Shipping",
+            "taxTax": "Tax",
+            "totalSubtotal": "Subtotal",
+            "totalTotal": "Total"
+        }, true);
+        JotForm.isNewSaveAndContinueLaterActive = true;
+        /*INIT-END*/
+    });
+
+    JotForm.prepareCalculationsOnTheFly([null, {
+        "name": "preorderForm",
+        "qid": "1",
+        "text": "Pre-Order Form",
+        "type": "control_head"
+    }, null, null, null, null, {
+        "name": "fullName6",
+        "qid": "6",
+        "text": "Full Name",
+        "type": "control_fullname"
+    }, {
+        "name": "contactNumber",
+        "qid": "7",
+        "text": "Contact Number",
+        "type": "control_phone"
+    }, {
+        "name": "email8",
+        "qid": "8",
+        "subLabel": "example@example.com",
+        "text": "E-mail",
+        "type": "control_email"
+    }, {
+        "name": "address9",
+        "qid": "9",
+        "text": "Address",
+        "type": "control_address"
+    }, null, null, null, null, {
+        "name": "orderDate",
+        "qid": "14",
+        "text": "Order Date & Time",
+        "type": "control_datetime"
+    }, null, null, null, null, null, null, null, null, null, {
+        "name": "pleaseSelect",
+        "qid": "24",
+        "text": "Please select all your orders below. ",
+        "type": "control_payment"
+    }, {
+        "name": "submit",
+        "qid": "25",
+        "text": "Submit",
+        "type": "control_button"
+    }, {
+        "name": "ifYou",
+        "qid": "26",
+        "text": "If you have any additional notes about this order, please write.",
+        "type": "control_textarea"
+    }]);
+    setTimeout(function() {
+        JotForm.paymentExtrasOnTheFly([null, {
+            "name": "preorderForm",
+            "qid": "1",
+            "text": "Pre-Order Form",
+            "type": "control_head"
+        }, null, null, null, null, {
+            "name": "fullName6",
+            "qid": "6",
+            "text": "Full Name",
+            "type": "control_fullname"
+        }, {
+            "name": "contactNumber",
+            "qid": "7",
+            "text": "Contact Number",
+            "type": "control_phone"
+        }, {
+            "name": "email8",
+            "qid": "8",
+            "subLabel": "example@example.com",
+            "text": "E-mail",
+            "type": "control_email"
+        }, {
+            "name": "address9",
+            "qid": "9",
+            "text": "Address",
+            "type": "control_address"
+        }, null, null, null, null, {
+            "name": "orderDate",
+            "qid": "14",
+            "text": "Order Date & Time",
+            "type": "control_datetime"
+        }, null, null, null, null, null, null, null, null, null, {
+            "name": "pleaseSelect",
+            "qid": "24",
+            "text": "Please select all your orders below. ",
+            "type": "control_payment"
+        }, {
+            "name": "submit",
+            "qid": "25",
+            "text": "Submit",
+            "type": "control_button"
+        }, {
+            "name": "ifYou",
+            "qid": "26",
+            "text": "If you have any additional notes about this order, please write.",
+            "type": "control_textarea"
+        }]);
+    }, 20);
+</script>
+<style type="text/css">
+    @media print {
+        .form-section {
+            display: inline!important
         }
-        
-        .form-control label {
-            display: block;
-            margin-bottom: 10px;
+        .form-pagebreak {
+            display: none!important
         }
-        
-        .form-control input,
-        .form-control select,
-        .form-control textarea {
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            padding: 10px;
-            display: block;
-            width: 95%;
-            background-color: inherit;
+        .form-section-closed {
+            height: auto!important
         }
-        
-        .form-control input[type="radio"],
-        .form-control input[type="checkbox"] {
-            display: inline-block;
-            width: auto;
+        .page-section {
+            position: initial!important
         }
-        
-        button {
-            background-color: #93ade9;
-            border: 1px solid #777;
-            border-radius: 2px;
-            font-family: inherit;
-            font-size: 21px;
-            display: block;
-            width: 100%;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
+    }
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=6310a6ad592c72439615db25" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.36664" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.36664" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<body>
-    <h1 class="p-2">TICKET GENERATION</h1>
-    <form id="form">
-        <div class="form-control">
-            <label for="name" id="label-name">
-				Full Name
-			</label>
-            <input type="text" id="name" placeholder="Please Enter your Full Name" />
-        </div>
-
-        <div class="form-control">
-            <label for="email" id="label-email">
-				Email
-			</label>
-            <input type="email" id="email" placeholder="Please Enter your Email" />
-        </div>
-
-        <div class="form-control">
-            <label for="age" id="label-age">
-				Age
-			</label>
-            <input type="text" id="age" placeholder="Please Enter your Age" />
-        </div>
-
-        <div class="form-control">
-            <label for="role" id="label-role">
-				Which option best describes you?
-			</label>
-
-            <!-- Dropdown options -->
-            <select name="role" id="role">
-				<option value="student">Student</option>
-				<option value="govtofficer">Govt Officer</option>
-				<option value="professional">Professional</option>
-                <option value="runninghousehold">Running Household</option>
-                <option value="worksinindustry">Works in Industry</option>
-				<option value="other">Other</option>
-			</select>
-        </div>
-        <div class="form-control">
-            <label>Source of waste</label>
-            <label for="source-1">
-                <input type="radio"
-                    id="source-1"
-                    name="source">Household</input>
-            </label>
-            <label for="source-2">
-                <input type="radio"
-                    id="source-2"
-                    name="source">Commercial/Industry</input>
-            </label>
-        </div>
-
-        <div class="form-control">
-            <label>What type of waste needs to be discarded?
-				<small>(Check that applies)</small>
-			</label>
-            <label for="inp-1">
-				<input type="checkbox"
-					name="inp">Industrial Waste</input></label>
-            <label for="inp-2">
-				<input type="checkbox"
-					name="inp">Commercial Waste</input></label>
-            <label for="inp-3">
-				<input type="checkbox"
-					name="inp">Domestic Waste</input></label>
-            <label for="inp-4">
-				<input type="checkbox"
-					name="inp">Agricultural Waste</input></label>
-            <label for="inp-5">
-				<input type="checkbox"
-					name="inp">Biodegradable</input></label>
-            <label for="inp-6">
-				<input type="checkbox"
-					name="inp">Non-biodegradable</input></label>
-        </div>
-
-        <div class="form-control">
-            <label>Would you recommend this website to someone?</label>
-            <label for="recommed-1">
-				<input type="radio"
-					id="recommed-1"
-					name="recommed">Yes</input>
-			</label>
-            <label for="recommed-2">
-				<input type="radio"
-					id="recommed-2"
-					name="recommed">No</input>
-			</label>
-            <label for="recommed-3">
-				<input type="radio"
-					id="recommed-3"
-					name="recommed">Maybe</input>
-			</label>
-        </div>
-        <div class="form-control">
-            <div class="card" style="background-color:inherit;">
-                <div class="card-body">
-                    <label for="comment">
-                Please Enter Your Full Address
-			</label>
-                    <textarea name="comment" id="comment" placeholder="Enter your comment here">
-            </textarea>
-                    <div class="row">
-                        <div class="col-12 text-center mt-5">
-                            OR
+<form class="jotform-form" action="https://submit.jotform.com/submit/222984894097475/" method="post" name="form_222984894097475" id="222984894097475" accept-charset="utf-8" autocomplete="on">
+    <input type="hidden" name="formID" value="222984894097475" />
+    <input type="hidden" id="JWTContainer" value="" />
+    <input type="hidden" id="cardinalOrderNumber" value="" />
+    <div role="main" class="form-all">
+        <style>
+            .form-all:before {
+                background: none;
+            }
+            
+            form {
+                background-color: gainsboro;
+                /* max-width: 500px; */
+                margin: 20px auto;
+                padding: 30px 20px;
+                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            }
+            
+            .form-control {
+                background-color: inherit;
+                text-align: left;
+                margin-bottom: 25px;
+            }
+            
+            .form-control label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            .form-control input,
+            .form-control select,
+            .form-control textarea {
+                border: 1px solid #777;
+                border-radius: 2px;
+                font-family: inherit;
+                padding: 10px;
+                display: block;
+                width: 95%;
+                background-color: inherit;
+            }
+            
+            .form-control input[type="radio"],
+            .form-control input[type="checkbox"] {
+                display: inline-block;
+                width: auto;
+            }
+            
+            button {
+                background-color: #93ade9;
+                border: 1px solid #777;
+                border-radius: 2px;
+                font-family: inherit;
+                font-size: 21px;
+                display: block;
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        </style>
+        <ul class="form-section page-section">
+            <li id="cid_1" class="form-input-wide" data-type="control_head">
+                <div class="form-header-group  header-large">
+                    <div class="header-text httac htvam">
+                        <img src="https://img.icons8.com/dusk/64/000000/garbage-truck.png" />
+                        <h1 id="header_1" class="form-header" data-component="header">
+                            Send a pickup request
+                        </h1>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line jf-required" data-type="control_fullname" id="id_6">
+                <label class="form-label form-label-top form-label-extended form-label-auto" id="label_6" for="first_6">
+          Full Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+                <div id="cid_6" class="form-input-wide jf-required" data-layout="full">
+                    <div data-wrapper-react="true" class="extended">
+                        <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+              <input type="text" id="first_6" name="q6_fullName6[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_6 given-name" size="10" value="" data-component="first" aria-labelledby="label_6 sublabel_6_first" required="" />
+              <label class="form-sub-label" for="first_6" id="sublabel_6_first" style="min-height:13px" aria-hidden="false"> First Name </label>
+            </span>
+                        <span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle">
+              <input type="text" id="middle_6" name="q6_fullName6[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_6 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_6 sublabel_6_middle" required="" />
+              <label class="form-sub-label" for="middle_6" id="sublabel_6_middle" style="min-height:13px" aria-hidden="false"> Middle Name </label>
+            </span>
+                        <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+              <input type="text" id="last_6" name="q6_fullName6[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_6 family-name" size="15" value="" data-component="last" aria-labelledby="label_6 sublabel_6_last" required="" />
+              <label class="form-sub-label" for="last_6" id="sublabel_6_last" style="min-height:13px" aria-hidden="false"> Last Name </label>
+            </span>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line form-line-column form-col-1 jf-required" data-type="control_phone" id="id_7">
+                <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7_full">
+          Contact Number
+          <span class="form-required">
+            *
+          </span>
+        </label>
+                <div id="cid_7" class="form-input-wide jf-required" data-layout="half">
+                    <span class="form-sub-label-container" style="vertical-align:top">
+            <input type="tel" id="input_7_full" name="q7_contactNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_7 tel-national" style="width:310px" data-masked="true" value="" placeholder="(+91) 00000-00000" data-component="phone" aria-labelledby="label_7" required="" />
+            <label class="form-sub-label is-empty" for="input_7_full" id="sublabel_7_masked" style="min-height:13px" aria-hidden="false">  </label>
+          </span>
+                </div>
+            </li>
+            <li class="form-line form-line-column form-col-2 jf-required" data-type="control_email" id="id_8">
+                <label class="form-label form-label-top form-label-auto" id="label_8" for="input_8">
+          E-mail
+          <span class="form-required">
+            *
+          </span>
+        </label>
+                <div id="cid_8" class="form-input-wide jf-required" data-layout="half">
+                    <span class="form-sub-label-container" style="vertical-align:top">
+            <input type="email" id="input_8" name="q8_email8" class="form-textbox validate[required, Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_8 sublabel_input_8" required="" />
+            <label class="form-sub-label" for="input_8" id="sublabel_input_8" style="min-height:13px" aria-hidden="false"> example@example.com </label>
+          </span>
+                </div>
+            </li>
+            <li class="form-line jf-required" data-type="control_address" id="id_9">
+                <label class="form-label form-label-top form-label-auto" id="label_9" for="input_9_addr_line1">
+          Address
+          <span class="form-required">
+            *
+          </span>
+        </label>
+                <div id="cid_9" class="form-input-wide jf-required" data-layout="full">
+                    <div summary="" class="form-address-table jsTest-addressField">
+                        <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                            <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_9_addr_line1" name="q9_address9[addr_line1]" class="form-textbox validate[required] form-address-line" data-defaultvalue="" autoComplete="section-input_9 address-line1" value="" data-component="address_line_1" aria-labelledby="label_9 sublabel_9_addr_line1" required="" />
+                  <label class="form-sub-label" for="input_9_addr_line1" id="sublabel_9_addr_line1" style="min-height:13px" aria-hidden="false"> Street Address </label>
+                </span>
+                            </span>
                         </div>
-                        <div class="col-12 text-center mt-0">
-                            <a class="m-0" href="#">
-                                <button type="submit" class="btn btn-outline-primary" id="submit" style="font-size:20px"><i class="fa fa-1x fa-map-marker mr-2"></i>Get Location</button>
-                            </a>
+                        <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                            <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_9_addr_line2" name="q9_address9[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_9 address-line2" value="" data-component="address_line_2" aria-labelledby="label_9 sublabel_9_addr_line2" />
+                  <label class="form-sub-label" for="input_9_addr_line2" id="sublabel_9_addr_line2" style="min-height:13px" aria-hidden="false"> Street Address Line 2 </label>
+                </span>
+                            </span>
+                        </div>
+                        <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                            <span class="form-address-line form-address-city-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_9_city" name="q9_address9[city]" class="form-textbox validate[required] form-address-city" data-defaultvalue="" autoComplete="section-input_9 address-level2" value="" data-component="city" aria-labelledby="label_9 sublabel_9_city" required="" />
+                  <label class="form-sub-label" for="input_9_city" id="sublabel_9_city" style="min-height:13px" aria-hidden="false"> City </label>
+                </span>
+                            </span>
+                            <span class="form-address-line form-address-state-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_9_state" name="q9_address9[state]" class="form-textbox validate[required] form-address-state" data-defaultvalue="" autoComplete="section-input_9 address-level1" value="" data-component="state" aria-labelledby="label_9 sublabel_9_state" required="" />
+                  <label class="form-sub-label" for="input_9_state" id="sublabel_9_state" style="min-height:13px" aria-hidden="false"> State / Province </label>
+                </span>
+                            </span>
+                        </div>
+                        <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                            <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="text" id="input_9_postal" name="q9_address9[postal]" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" autoComplete="section-input_9 postal-code" value="" data-component="zip" aria-labelledby="label_9 sublabel_9_postal" required="" />
+                  <label class="form-sub-label" for="input_9_postal" id="sublabel_9_postal" style="min-height:13px" aria-hidden="false"> Postal / Zip Code </label>
+                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
+            </li>
+            <li class="form-line jf-required allowTime" data-type="control_datetime" id="id_14">
+                <label class="form-label form-label-top form-label-auto" id="label_14" for="lite_mode_14">
+          Today's Date &amp; Time
+          <span class="form-required">
+            *
+          </span>
+        </label>
+                <div id="cid_14" class="form-input-wide jf-required" data-layout="full">
+                    <div data-wrapper-react="true" class="extended">
+                        <div style="display:none">
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_14" name="q14_orderDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="10" required="" autoComplete="section-input_14 off" aria-labelledby="label_14 sublabel_14_month" />
+                <span class="date-separate" aria-hidden="true">
+                   -
+                </span>
+                            <label class="form-sub-label" for="month_14" id="sublabel_14_month" style="min-height:13px" aria-hidden="false"> Month </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="currentDate form-textbox validate[required, limitDate]" id="day_14" name="q14_orderDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="26" required="" autoComplete="section-input_14 off" aria-labelledby="label_14 sublabel_14_day" />
+                <span class="date-separate" aria-hidden="true">
+                   -
+                </span>
+                            <label class="form-sub-label" for="day_14" id="sublabel_14_day" style="min-height:13px" aria-hidden="false"> Day </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_14" name="q14_orderDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2022" required="" autoComplete="section-input_14 off" aria-labelledby="label_14 sublabel_14_year" />
+                <label class="form-sub-label" for="year_14" id="sublabel_14_year" style="min-height:13px" aria-hidden="false"> Year </label>
+              </span>
+                        </div>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_14" size="12" data-maxlength="12" maxLength="12" data-age="" value="10-26-2022" required="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="section-input_14 off" aria-labelledby="label_14 sublabel_14_litemode" />
+              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_14_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="Yes" data-version="v2" />
+              <label class="form-sub-label" for="lite_mode_14" id="sublabel_14_litemode" style="min-height:13px" aria-hidden="false"> Date </label>
+            </span>
+                        <span class="allowTime-container timeAMPM">
+              <div data-wrapper-react="true">
+                <span class="form-sub-label-container hasAMPM" style="vertical-align:top">
+                  <input type="text" class="currentTime time-dropdown form-textbox validate[required]" id="input_14_timeInput" name="q14_orderDate[timeInput]" required="" placeholder="HH : MM" aria-labelledby="label_14 sublabel_14_hour" data-mask="hh:MM" value="12:49" data-version="v2" />
+                  <input type="hidden" class="form-hidden-time" id="input_14_hourSelect" name="q14_orderDate[hour]" value="12" />
+                  <input type="hidden" class="form-hidden-time" id="input_14_minuteSelect" name="q14_orderDate[min]" value="49" />
+                  <label data-seperate-translate="true" class="form-sub-label" for="input_14_timeInput" id="sublabel_14_hour" style="min-height:13px" aria-hidden="false"> Hour Minutes </label>
+                </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                  <select class="time-dropdown form-dropdown validate[required]" id="input_14_ampm" name="q14_orderDate[ampm]" data-component="time-ampm" required="" aria-labelledby="label_14 sublabel_14_ampm">
+                    <option value="AM"> AM </option>
+                    <option selected="" value="PM"> PM </option>
+                  </select>
+                  <label class="form-sub-label" for="input_14_ampm" id="sublabel_14_ampm" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false"> AM/PM Option </label>
+                </span>
+                    </div>
+                    </span>
+                </div>
+    </div>
+    </li>
+    <div class="form-control" style="margin-left: 20px;">
+        <label style="font-weight: bold" style="margin: 10px;">    Source of waste</label> <br>
+        <label for="source-1">
+            <input type="radio"
+                id="source-1"
+                name="source" style="margin: 10px;">Household</input>
+        </label> <br>
+        <label for="source-2">
+            <input type="radio"
+                id="source-2"
+                name="source" style="margin: 10px;">Commercial/Industry</input>
+        </label> <br>
+    </div>
+    <li class="form-line" data-type="control_payment" id="id_24" data-payment="true">
+        <label class="form-label form-label-top" id="label_24" for="input_24"> Please select the type of waste. </label>
+        <div id="cid_24" class="form-input-wide" data-layout="full">
+            <div data-wrapper-react="true">
+                <div data-wrapper-react="true" class="product-container-wrapper">
+                    <div class="filter-container">
+                    </div>
+                    <input type="hidden" name="simple_fpc" data-payment_type="payment" data-component="payment1" value="24" />
+                    <input type="hidden" name="payment_total_checksum" id="payment_total_checksum" data-component="payment2" />
+                    <div id="image-overlay" class="overlay-content" style="display:none">
+                        <img id="current-image" />
+                        <span class="lb-prev-button">
+                  prev
+                </span>
+                        <span class="lb-next-button">
+                  next
+                </span>
+                        <span class="lb-close-button">
+                  ( X )
+                </span>
+                        <span class="image-overlay-product-container">
+                  <ul class="form-overlay-item" pid="1000" hasicon="false" hasimages="true" iconvalue="">
+                    <li class="image-overlay-image">
+                      <img src="https://cdn.jotfor.ms/assets/img/payments/sample_image-3.png" />
+                    </li>
+                    <li class="image-overlay-image">
+                      <img src="https://cdn.jotfor.ms/assets/img/payments/sample_image-2.png" />
+                    </li>
+                  </ul>
+                  <ul class="form-overlay-item" pid="1001" hasicon="false" hasimages="true" iconvalue="">
+                    <li class="image-overlay-image">
+                      <img src="https://www.jotform.com/uploads/ugurg/form_files/sample_image-1.png" />
+                    </li>
+                  </ul>
+                  <ul class="form-overlay-item" pid="1002" hasicon="false" hasimages="true" iconvalue="">
+                    <li class="image-overlay-image">
+                      <img src="https://www.jotform.com/uploads/ugurg/form_files/sample_image-2.png" />
+                    </li>
+                  </ul>
+                </span>
+                    </div>
+                    <div data-wrapper-react="true">
+                        <span class="form-product-item hover-product-item  show_image show_desc show_option new_ui" categories="non-categorized" pid="1000" aria-labelledby="label_24">
+                  <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                    <div class="p_col">
+                      <div class="p_checkbox">
+                        <input type="checkbox" class="form-checkbox  form-product-input" id="input_24_1000" name="q24_pleaseSelect[][id]" value="1000" />
+                        <div class="checked">
+                        </div>
+                        <div class="select_border">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p_image">
+                      <div role="img" aria-label="T-Shirt" class="image_area form-product-image-with-options" style="background-image:url(&quot;https://cdn.jotfor.ms/assets/img/payments/sample_image-3.png&quot;)">
+                      </div>
+                    </div>
+                    <div for="input_24_1000" class="form-product-container">
+                      <span data-wrapper-react="true">
+                        <div class="title_description">
+                          <span class="form-product-name" id="product-name-input_24_1000">
+                            Dry Waste
+                          </span>
+                        <span class="form-product-description" id="product-name-description-input_24_1000">
+                            Enter description
+                          </span>
+                    </div>
+                    </span>
+                    <span class="form-sub-label-container" style="vertical-align:top">
+                        <label class="form-sub-label" for="input_24_quantity_1000_0" style="min-height:13px" aria-hidden="false"> Volume </label>
+                        <span class="select_cont">
+                          <select class="form-dropdown" name="q24_pleaseSelect[special_1000][item_0]" id="input_24_quantity_1000_0">
+                            <option value="1"> 10 KGs </option>
+                            <option value="2"> 20 KGs </option>
+                            <option value="3"> 30 KGs </option>
+                            <option value="4"> 40 KGs </option>
+                            <option value="5"> 50 KGs </option>
+                            <option value="6"> 100 KGs </option>
+                            <option value="7"> 200 KGs </option>
+                            <option value="8"> 300 KGs </option>
+                            <option value="9"> 400 Kgs </option>
+                            <option value="10"> 500+ KGs </option>
+                          </select>
+                        </span>
+                    </span>
+                </div>
+                <div class="focus_action_button_container">
+                    <a class="btn-inline-product-delete"> </a>
+                    <a class="btn-inline-product-settings"> </a>
+                </div>
             </div>
-            <div class="form-control">
-                <label for="comment">
-				Your Comments/Suggestions are highly appreciated!
-			</label>
-                <textarea name="comment" id="comment" placeholder="Enter your comment here">
-			</textarea>
+            </span>
+            <div class="p_item_separator ">
             </div>
+            <span class="form-product-item hover-product-item  show_image show_option new_ui" categories="non-categorized" pid="1001" aria-labelledby="label_24">
+                  <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                    <div class="p_col">
+                      <div class="p_checkbox">
+                        <input type="checkbox" class="form-checkbox  form-product-input" id="input_24_1001" name="q24_pleaseSelect[][id]" value="1001" />
+                        <div class="checked">
+                        </div>
+                        <div class="select_border">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p_image">
+                      <div role="img" aria-label="Hygienic Set" class="image_area form-product-image-with-options" style="background-image:url(&quot;https://www.jotform.com/uploads/ugurg/form_files/sample_image-1.png&quot;)">
+                      </div>
+                    </div>
+                    <div for="input_24_1001" class="form-product-container">
+                      <span data-wrapper-react="true">
+                        <div class="title_description">
+                          <span class="form-product-name" id="product-name-input_24_1001">
+                            Wet Waste
+                          </span>
+            <span class="form-product-description" id="product-name-description-input_24_1001">
+                          </span>
+        </div>
+        <span class="form-sub-label-container" style="vertical-align:top">
+                            <label class="form-sub-label" for="input_24_quantity_1000_0" style="min-height:13px" aria-hidden="false"> Volume </label>
+                            <span class="select_cont">
+                              <select class="form-dropdown" name="q24_pleaseSelect[special_1000][item_0]" id="input_24_quantity_1000_0">
+                                <option value="1"> 10 KGs </option>
+                                <option value="2"> 20 KGs </option>
+                                <option value="3"> 30 KGs </option>
+                                <option value="4"> 40 KGs </option>
+                                <option value="5"> 50 KGs </option>
+                                <option value="6"> 100 KGs </option>
+                                <option value="7"> 200 KGs </option>
+                                <option value="8"> 300 KGs </option>
+                                <option value="9"> 400 Kgs </option>
+                                <option value="10"> 500+ KGs </option>
+                              </select>
+                            </span>
+        </span>
+        </div>
+        <div class="focus_action_button_container">
+            <a class="btn-inline-product-delete"> </a>
+            <a class="btn-inline-product-settings"> </a>
+        </div>
+        </div>
+        </span>
+        <div class="p_item_separator ">
+        </div>
+        <span class="form-product-item hover-product-item  show_image show_option show_sub_product new_ui" categories="non-categorized" pid="1002" aria-labelledby="label_24">
+                  <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                    <div class="p_col">
+                      <div class="p_checkbox">
+                        <input type="checkbox" class="form-checkbox form-product-has-subproducts form-product-input" id="input_24_1002" name="q24_pleaseSelect[][id]" value="1002_expanded" />
+                        <div class="checked">
+                        </div>
+                        <div class="select_border">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p_image">
+                      <div role="img" aria-label="Food" class="image_area form-product-image-with-options" style="background-image:url(&quot;https://www.jotform.com/uploads/ugurg/form_files/sample_image-2.png&quot;)">
+                      </div>
+                    </div>
+                    <div for="input_24_1002" class="form-product-container">
+                      <span data-wrapper-react="true">
+                        <div class="title_description">
+                          <span class="form-product-name" id="product-name-input_24_1002">
+                            Bio-degradable Waste
+                          </span>
+        <span class="form-product-description" id="product-name-description-input_24_1002">
+                          </span>
+        </div>
+        <span class="form-sub-label-container" style="vertical-align:top">
+                            <label class="form-sub-label" for="input_24_quantity_1000_0" style="min-height:13px" aria-hidden="false"> Volume </label>
+                            <span class="select_cont">
+                              <select class="form-dropdown" name="q24_pleaseSelect[special_1000][item_0]" id="input_24_quantity_1000_0">
+                                <option value="1"> 10 KGs </option>
+                                <option value="2"> 20 KGs </option>
+                                <option value="3"> 30 KGs </option>
+                                <option value="4"> 40 KGs </option>
+                                <option value="5"> 50 KGs </option>
+                                <option value="6"> 100 KGs </option>
+                                <option value="7"> 200 KGs </option>
+                                <option value="8"> 300 KGs </option>
+                                <option value="9"> 400 Kgs </option>
+                                <option value="10"> 500+ KGs </option>
+                              </select>
+                            </span>
+        </span>
+        </span>
+        </div>
+        <div class="focus_action_button_container">
+            <a class="btn-inline-product-delete"> </a>
+            <a class="btn-inline-product-settings"> </a>
+        </div>
+        </div>
+        </span>
+        </div>
+        </div>
+        </div>
+        </div>
+    </li>
+    <div class="card" style="background-color:inherit; left: 30%; margin: 0;">
+        <div class="card-body">
+            <label for="comment">
+                <strong>Please Enter Your Full Address</strong>
+			</label> <br>
+            <textarea name="comment" id="comment" placeholder="Enter your comment here" maxlength="150" cols="30" rows="5"></textarea>
             <div class="row">
-                <a class="btn btn-warning col-md-5 m-3" href="./index2.html">Back</a>
-                <a class="btn btn-success col-md-5 m-3" data-toggle="modal" data-target="#exampleModal" href="./ticket.html">Submit</a>
-            </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            Your data has been submitted, a collector will be contacting you soon.
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
+                <div class="col-12 text-center mt-5">
+                    OR
+                </div>
+                <div class="col-12 text-center mt-0">
+                    <a class="m-0" href="#">
+                        <button type="submit" class="btn btn-outline-primary" id="submit" style="font-size:20px"><i class="fa fa-1x fa-map-marker mr-2"></i>Get Location</button>
+                    </a>
                 </div>
             </div>
         </div>
-    </form>
-</body>
+    </div>
+    <li class="form-line" data-type="control_textarea" id="id_26">
+        <label class="form-label form-label-top form-label-auto" id="label_26" for="input_26"> If you have any additional notes about this order, please write. </label>
+        <div id="cid_26" class="form-input-wide" data-layout="full">
+            <textarea id="input_26" class="form-textarea" name="q26_ifYou" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_26"></textarea>
+        </div>
+    </li>
+    <li class="form-line" data-type="control_button" id="id_25">
+        <div id="cid_25" class="form-input-wide" data-layout="full">
+            <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+                <button id="input_scl_25" type="button" class=" form-sacl-button" data-component="">
+              <a href="./index2.html" class=" text-muted" style="text-decoration: none; font-family:inherit">Back</a>
+            </button>
+                <button id="input_25" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+              Submit
+            </button>
+            </div>
+        </div>
+    </li>
+    <li style="display:none">
+        Should be Empty:
+        <input type="text" name="website" value="" />
+    </li>
+    </ul>
+    </div>
+    <script>
+        JotForm.showJotFormPowered = "new_footer";
+    </script>
+    <script>
+        JotForm.poweredByText = "Powered by Jotform";
+    </script>
+    <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="222984894097475" />
+    <script type="text/javascript">
+        var all_spc = document.querySelectorAll("form[id='222984894097475'] .si" + "mple" + "_spc");
+        for (var i = 0; i < all_spc.length; i++) {
+            all_spc[i].value = "222984894097475-222984894097475";
+        }
+    </script>
+    <div class="formFooter-heightMask">
+    </div>
 
-</html>
+</form>
+<script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.36664"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.36664"></script>
+<script type="text/javascript">
+    window.GOOGLE_SIGNON = "172124630376-qk1qmdfmur2ojaf39e070iqhpt2foaip.apps.googleusercontent.com"
+</script>
+<script type="text/javascript">
+    window.FACEBOOK_SIGNON_APP_ID = "1140740696088074"
+</script>
+<script type="text/javascript">
+    window.MICROSOFT_SIGNON_CLIENT_ID = "482577e8-f8d0-4a09-bbbb-15de3d05eebe"
+</script>
+<script>
+    window.JotFormAPIEndpoint = "https://api.jotform.com";
+</script>
+<script>
+    window.___JFsclActive = true;
+</script>
+<script>
+    window.JFForm = {
+        id: '222984894097475',
+        skippable: true,
+        isHipaa: ''
+    };
+</script>
+<script defer src="https://cdn.jotfor.ms/s/umd/58e07f2d61e/for-formuser.js"></script>
